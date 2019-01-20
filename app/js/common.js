@@ -288,6 +288,51 @@ $(function() {
 		console.log($newHeight);
 	});
 	
+	// filter dropdown
+	
+	var $filterDropdownButton = $('.catalog .sort-container .filter-btn'),
+		$filterDropdown = $('.catalog .sort-container .filter-dropdown');
+	$filterDropdownButton.click(function() {
+		if(!$(this).hasClass('active')) {
+			$(this).addClass('active');
+			$filterDropdown.slideDown();
+		} else {
+			$(this).removeClass('active');
+			$filterDropdown.slideUp();
+		}
+	});
+	
+	// init range filter
+	
+	var $filterRange = $('.catalog .sort-container .filter-dropdown .slide-range');
+	$filterRange.slider({
+		range: true,
+		min: 0,
+		max: 217,
+		values: [ 0, 500 ],
+		slide: function( event, ui ) {
+			$(".catalog .sort-container .filter-dropdown .start-price").html( ui.values[ 0 ] );
+			$(".catalog .sort-container .filter-dropdown .end-price").html( ui.values[ 1 ] );
+		}
+	});
+	
+	$(".catalog .sort-container .filter-dropdown .start-price").change(function() {
+	   $filterRange.slider('values',0,$(this).val());
+	});
+	
+	$(".catalog .sort-container .filter-dropdown .end-price").change(function() {
+	    $filterRange.slider('values',1,$(this).val());
+	});
+	
+	// catalog drid template
+	
+	var $containerGridType = $('.catalog .sort-container .grid-template'),
+		$btnsGridType = $containerGridType.find('span');
+	
+	$btnsGridType.click(function() {
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+	
 });
 
 /* Helper function's */

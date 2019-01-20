@@ -673,15 +673,16 @@ nav.breadcrumb
 					&:last-child
 						margin-bottom: 0
 		.filter-dropdown
+			display: none
 			position: absolute
-			left: -2px
-			bottom: -301px
+			left: -1px
+			top: 61px
 			background-color: #fff
 			border: 1px solid #e2e2e2
 			border-top: none
 			padding: 12px 25px
 			border-radius: 0 0 2px 2px
-			width: calc(100% + 4px)
+			width: calc(100% + 3px)
 			z-index: 5
 			h4
 				position: relative
@@ -712,6 +713,57 @@ nav.breadcrumb
 						&:hover
 							font-family: "SegoeBold", sans-serif
 							color: $accent
+			form
+				input
+					position: absolute
+					z-index: -1
+					opacity: 0
+					margin: 10px 0 0 20px
+				input + label
+					font-family: "SegoeSemiBold", sans-serif
+					font-size: 14px
+					margin-right: 25px
+					margin-bottom: 15px
+					cursor: pointer
+					a
+						display: inline-block
+						font-family: "SrgoeSemiBold", sans-serif
+						font-size: 14px
+						text-decoration: underline
+						color: $accent
+				input + label::before
+					content: ''
+					display: inline-block
+					width: 20px
+					height: 20px
+					border-radius: 2px
+					background-color: transparent
+					background-image: url(../img/icons/check-mark-black-outline.svg)
+					background-repeat: no-repeat
+					background-size: 10px 10px
+					background-position: -6px -6px
+					border: 2px solid #e2e2e2
+					vertical-align: top
+					margin-right: 10px
+				input:checked + label::before
+					background-position: center center
+		.slide-range
+			height: 6px
+			width: 80%
+			margin-left: 6px
+			margin-bottom: 15px
+			.ui-widget-header
+				background-color: #969696
+			.ui-state-default, 
+			.ui-widget-content .ui-state-default, 
+			.ui-widget-header .ui-state-default
+				background-color: #CFCFCF
+				width: 15px
+				height: 15px
+		.price-row
+			font-family: "SegoeSemiBold", sans-serif
+			font-size: 16px
+			color: #282828
 		.digit-select
 			font-family: "SegoeSemiLight", sans-serif
 			font-size: 13px
