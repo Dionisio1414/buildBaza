@@ -1,6 +1,14 @@
 @import 'vars'
 
 +media-breakpoint-up(xl)
+	.footer	
+		&__bottom 
+			.right-part
+				.footer-border-right
+					&::after
+						bottom: 0
+						width: 0
+						height: 0
 	
 @media screen and (max-width: 1600px)
 	.header
@@ -11,6 +19,14 @@
 		&__bottom 
 			nav
 				margin: 0 70px
+	.footer	
+		&__bottom 
+			.right-part
+				.footer-border-right
+					&::after
+						bottom: 0
+						width: 0
+						height: 0
 	
 @media screen and (max-width: 1440px)
 	.header
@@ -214,5 +230,191 @@
 					letter-spacing: unset
 	
 +media-breakpoint-down(sm)
+	.header
+		&__middle 
+			form
+				margin-top: 3px
+				margin-left: 0
+				input
+					height: 35px
+					padding-left: 10px
+				.button-mobile
+					padding: 0 12px
+					height: 35px
+			.wrapper
+				margin-top: 7px
+				.login,
+				.basket
+					img
+						width: 20px
+				.login
+					margin-left: 0
+					margin-right: 10px
+		&__bottom 
+			nav 
+				ul 
+					li
+						width: 35%
+						a
+							font-size: 13px
+							img
+								margin-top: 5px
+								margin-right: 0
+								width: 13px
+	.footer
+		&__bottom
+			padding: 30px 30px 10px 30px
+			form
+				margin-left: 35px
+			.right-part 
+				h4
+					margin-left: 35px!important
+				.menu
+					margin-left: 35px
+			h4
+				font-size: 14px
+			ul
+				li
+					font-size: 13px
+					padding-right: 35px
+					img
+						width: 17px
+						margin-right: 5px
+			.contacts
+				li
+					a
+						width: 148px
+			.copyright-container 
+				.copyright
+					font-size: 13px
+					text-align: center
+					letter-spacing: .5px
+					margin-bottom: 20px
+				.us-logo 
+					justify-content: center
+					p
+						font-size: 13px
+					img
+						width: 125px
+						height: 50px
+						margin-left: 16px
 	
 +media-breakpoint-down(xs)
+	.header
+		&__middle
+			.logo
+				img
+					width: 50%
+			.wrapper 
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: flex-end
+				.basket,
+				.search,
+				.login
+					img
+						width: 20px
+				.search
+					display: inline-block
+					img
+						margin-right: 15px
+				.login
+					margin-right: 0
+					img
+						margin-right: 15px
+		&__bottom 
+			nav 
+				margin: 0
+				ul 
+					li:not(.catalog).contacts
+						display: none
+					li:not(.catalog).mobile-menu
+						border: none
+					li
+						padding: 18px 2%
+						width: 100%
+						&.catalog
+							margin: 0
+						a
+							display: inline-block
+							font-size: 14px
+							img
+								margin-left: auto
+								margin-right: 15px
+								margin-top: 5px
+	.footer	
+		&__top
+			.ar 
+				li.prev
+					left: 25px
+				li.next
+					right: 25px
+		&__bottom 
+			padding-top: 60px
+			ul
+				li
+					font-size: 12px
+					padding-right: 0
+			.contacts 
+				li 
+					a
+						width: 138px
+			h4
+				font-size: 16px
+				margin-bottom: 20px
+			form
+				margin-left: 0
+			.right-part 
+				margin-top: 80px
+				h4
+					margin-left: 0px!important
+					margin-bottom: 15px
+				.menu
+					margin-left: 0
+				.form-caption
+					margin-top: 50px
+				.footer-border-right
+					&::after
+						bottom: 0
+						width: 90%
+			.copyright-container 
+				.copyright
+					font-size: 12px
+					text-align: center
+					letter-spacing: unset
+					margin-bottom: 50px
+				.us-logo 
+					img
+						width: 100px
+						height: 40px
+						margin-left: 16px
+					p
+						line-height: 15px
+						letter-spacing: unset
+						font-size: 12px
+		.footer-border-right
+			&::after
+				height: 2px
+				width: 100%
+				top: auto
+				right: auto
+				bottom: -35px
+				border-right: none
+				border-bottom: 2px solid #e2e2e2
+	
+@media screen and (max-width: 425px)
+	.header
+		&__middle 
+			.logo 
+				img
+					width: 70%
+		
+@media screen and (max-width: 375px)
+	.header
+		&__middle 
+			.logo 
+				img
+					width: 85%

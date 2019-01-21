@@ -322,7 +322,8 @@ b, strong
 		.wrapper
 			margin-top: 21px
 			.login,
-			.basket
+			.basket,
+			.search
 				display: inline-block
 				cursor: pointer
 				img
@@ -342,6 +343,8 @@ b, strong
 					border-radius: 30%
 					text-align: center
 					width: 100%
+			.search
+				display: none
 	&__bottom
 		border-top: 2px solid #E2E2E2
 		border-bottom: 2px solid #E2E2E2
@@ -389,6 +392,7 @@ b, strong
 				.mobile-menu
 					display: none
 					.mobile-submenu
+						display: none
 						padding: 20px 30px
 						margin: 0
 						list-style-type: none
@@ -404,6 +408,7 @@ b, strong
 						ul
 							display: block
 							height: auto
+							margin-bottom: 30px
 							li
 								display: block
 								border: none
@@ -431,13 +436,17 @@ b, strong
 									margin-right: 3px
 								p
 									display: inline-block
-									max-width: 70%
+									max-width: 75%
 								a
 									display: inline-block
 									font-family: "SegoeRegular", sans-serif
 									font-size: 13px
 									text-transform: initial
 									letter-spacing: unset
+								&:last-child
+									margin-bottom: 0
+									img
+										vertical-align: text-top
 			.category-dropdown
 				display: none
 				padding: 20px 0
@@ -2780,18 +2789,20 @@ nav.breadcrumb
 			margin: 0
 			list-style-type: none
 			position: absolute
-			top: 24px
+			top: 0
 			width: 100%
+			height: 100%
 			li
 				position: absolute
+				top: 24px
 				img
 					width: 15px
 				&.prev
-					left: 50px
+					left: 0
 					img
 						transform: rotate(180deg)
 				&.next
-					right: 50px
+					right: 0
 	&__bottom
 		background-color: #333
 		padding: 60px 180px 10px 180px

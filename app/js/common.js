@@ -26,10 +26,21 @@ $(function() {
 				centerMode: true,
 				centerPadding: '60px',
 				slidesToShow: 3,
+				variableWidth: true,  
 				prevArrow: $('.footer__top .ar .prev'),
 				nextArrow: $('.footer__top .ar .next')  
 			  }
-			}
+			},
+//			{
+//				breakpoint: 576,
+//				settings: {
+//					arrows: false,
+//					slidesToShow: 1,
+//					variableWidth: true,
+//					centerPadding: false,
+//					centerMode: false
+//				}
+//			}
 		  ]
 	});
 	
@@ -368,6 +379,15 @@ $(function() {
 	
 	$btnsGridType.click(function() {
 		$(this).addClass('active').siblings().removeClass('active');
+	});
+	
+	
+	// mobile menu
+	
+	var $menuBtn = $('.header__bottom nav ul li:not(.catalog).mobile-menu');
+	$menuBtn.click(function(e) {
+		e.preventDefault();
+		$(this).find('.mobile-submenu').slideToggle();
 	});
 	
 });
