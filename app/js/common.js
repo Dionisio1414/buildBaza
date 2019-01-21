@@ -17,7 +17,20 @@ $(function() {
 	});
 	
 	$('.ft-slider').slick({
-		slidesToShow: 5
+		slidesToShow: 5,
+		  responsive: [
+			{
+			  breakpoint: 992,
+			  settings: {
+				arrows: true,
+				centerMode: true,
+				centerPadding: '60px',
+				slidesToShow: 3,
+				prevArrow: $('.footer__top .ar .prev'),
+				nextArrow: $('.footer__top .ar .next')  
+			  }
+			}
+		  ]
 	});
 	
 	// Slider main product
@@ -44,6 +57,29 @@ $(function() {
 //		delegate: 'a', 
 //		type: 'image'
 //	});
+	
+	
+	// modal registration $ authorization in header
+	
+	var $btnForModal = $('.header__middle .wrapper .login');
+	$btnForModal.click(function() {
+		$('.overlay-modal').fadeIn(400, 
+		 	function(){ 
+				$('.modal-form') 
+					.css('display', 'block') 
+					.animate({opacity: 1, top: '25%'}, 200);
+		});	
+	});
+	
+	$('.modal-form .modal-close').click(function() {
+		$('.modal-form') 
+			.animate({opacity: 0, top: '45%'}, 200,
+				function(){
+					$(this).css('display', 'none');
+					$('.overlay-modal').fadeOut(400);
+				}
+			);
+	});
 
 	
 	// tabs
@@ -139,6 +175,7 @@ $(function() {
 	var $categoriesDropdown = $('.header__middle form .dropdown');
 	$categoriesDropdown.click(function() {
 		$(this).find('.search-category').slideToggle();
+		$(this).toggleClass('active');
 	});
 	
 	// dropdown order select
@@ -185,8 +222,8 @@ $(function() {
 	
 	var $liCategories = $('.header__bottom nav ul li.catalog');
 	var $categoryDropdown = $('.header__bottom nav .category-dropdown');
-	$liCategories.on('click', function() {
-		$categoryDropdown.slideToggle();
+	$liCategories.hover(function() {
+		$categoryDropdown.delay(800).slideToggle();
 	})
 	
 	

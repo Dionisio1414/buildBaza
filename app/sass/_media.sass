@@ -1,0 +1,218 @@
+@import 'vars'
+
++media-breakpoint-up(xl)
+	
+@media screen and (max-width: 1600px)
+	.header
+		&__top
+			padding: 12px 101px 12px 97px
+		&__middle
+			padding: 30px 12px 30px 80px
+		&__bottom 
+			nav
+				margin: 0 70px
+	
+@media screen and (max-width: 1440px)
+	.header
+		&__middle
+			padding: 30px 56px 30px 82px
+	.footer
+		&__top 
+			.ft-slider
+				margin: 0 141px
+
+@media screen and (max-width: 1366px)
+	.header
+		&__top
+			padding: 12px 78px 12px 71px
+			span
+				font-size: 12px
+				img
+					width: 14px
+					height: 14px
+					vertical-align: sub
+		&__middle
+			padding: 30px 30px 30px 57px
+			.wrapper 
+				.login
+					margin-left: 12px
+		&__bottom 
+			nav 
+				margin: 0 50px
+				ul 
+					li 
+						a
+							font-size: 13px
+							img
+								width: 11px
+								margin-top: 5px
+	.footer
+		&__top 
+			.ft-slider
+				margin: 0 100px
+			.item 
+				img
+					margin-left: 10px
+		&__bottom
+			padding: 60px 100px 10px 100px
+	
++media-breakpoint-down(lg)
+	.header
+		&__top
+			padding: 12px 25px 12px 25px
+		&__middle
+			padding: 30px 15px 30px 15px
+		&__bottom 
+			nav
+				margin: 0 15px
+				ul
+					li
+						padding-left: 1.5%
+						padding-right: 1.5%
+						a
+							font-size: 12px
+							img
+								margin-top: 4px
+								margin-right: 4px
+	.footer
+		&__top 
+			.ft-slider
+				margin: 0 15px
+				.item 
+					img
+						width: 43px
+						height: 43px
+						margin-left: 15px
+					p
+						font-size: 12px
+		&__bottom
+			padding: 60px 30px 10px 30px
+			.contacts 
+				li 
+					a
+						width: 176px
+			h4
+				font-size: 14px
+			ul
+				li
+					font-size: 13px
+			.copyright-container 
+				.copyright
+					font-size: 12px
+				.us-logo 
+					p
+						font-size: 12px
+					img
+						width: 110px
+						height: 45px
+						margin-left: 15px
+		
++media-breakpoint-down(md)
+	.header
+		&__top
+			display: none
+		&__middle 
+			.wrapper 
+				.login
+					margin-left: 0
+					margin-right: 15px
+				.basket 
+					.count
+						top: -5px
+						left: 12px
+			form
+				.dropdown
+					display: none
+				button
+					display: none
+				.button-mobile
+					display: block
+					padding: 0 15px
+		&__bottom
+			nav
+				ul
+					li
+						width: 20%
+						padding-right: 1.5%
+						padding-left: 1.5%
+						a
+							font-size: 14px
+							img
+								margin-top: 4px
+								margin-right: 0
+								margin-left: 8px
+								width: 15px
+					li:not(.catalog)
+						display: none
+						&.contacts
+							display: block
+							text-align: right
+							width: 60%
+						&.mobile-menu
+							display: block
+				.category-dropdown
+					li
+						display: block!important
+						a
+							.arrow
+								left: calc(100% + 181px)
+						.submenu
+							li
+								a
+									.arrow-right
+										left: calc(100% + 145px)
+							.submenu
+								left: calc(100% + 185px)
+	.footer
+		.footer-border-right
+			&::after
+				height: 91.3%
+		&__top 
+			.ar
+				display: block
+				
+		&__bottom
+			ul
+				li
+					font-size: 14px
+					letter-spacing: unset
+					margin-bottom: 15px
+			.contacts 
+				li 
+					a
+						width: 166px
+					&:last-child
+						line-height: 17px
+			h4
+				font-size: 16px
+			.right-part
+				h4
+					margin-left: 60px!important
+					margin-bottom: 35px
+				.form-caption
+					margin-bottom: 15px
+				.menu
+					margin-left: 60px
+					margin-bottom: 30px
+					li
+						margin-bottom: 2px
+			form
+				margin-left: 60px
+			.copyright-container
+				margin-top: 50px
+				.us-logo 
+					p
+						font-size: 14px
+						line-height: 17px
+						letter-spacing: .5px
+					img
+						width: 125px
+						height: 50px
+						margin-left: 15px
+				.copyright
+					font-size: 14px
+					letter-spacing: unset
+	
++media-breakpoint-down(sm)
+	
++media-breakpoint-down(xs)

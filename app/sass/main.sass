@@ -66,6 +66,151 @@ b, strong
 	font-weight: bold
 
 
+/* Modal in header */
+
+.modal-form
+	width: 575px
+	height: 450px
+	border-radius: 5px
+	background-color: #fff
+	position: fixed
+	top: 0
+	left: 50%
+	transform: translate(-50%)
+	display: none
+	opacity: 0
+	z-index: 20
+	padding: 60px 100px 60px 100px
+	.modal-close
+		display: block
+		position: absolute
+		top: 15px
+		right: 15px
+		width: 25px
+		height: 25px
+		border-radius: 50%
+		background-color: #E2E2E2
+		border: 2px solid #232323
+		cursor: pointer
+		svg
+			display: block
+			width: 11px
+			height: 11px
+			margin: 0 auto
+			margin-top: 5px
+	.modal-contents
+		h1
+			font-family: "SegoeBold", sans-serif
+			font-size: 14px
+			text-transform: uppercase
+			text-align: center
+			margin-bottom: 35px
+		form
+			.form-group
+				position: relative
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				flex-direction: column
+				input
+					border: 1px solid #969696
+					border-radius: 2px
+					padding: 8px 15px
+					margin-bottom: 10px
+					width: 100%
+				.remember
+					position: absolute
+					right: 0
+					input[type="checkbox"]
+						position: absolute
+						z-index: -1
+						opacity: 0
+						margin: 10px 0 0 20px
+					input[type="checkbox"] + label
+						font-family: "SegoeSemiBold", sans-serif
+						font-size: 14px
+						margin-bottom: 15px
+						cursor: pointer
+						a
+							display: inline-block
+							font-family: "SrgoeSemiBold", sans-serif
+							font-size: 14px
+							text-decoration: underline
+							color: $accent
+					input[type="checkbox"] + label::before
+						content: ''
+						display: inline-block
+						width: 20px
+						height: 20px
+						border-radius: 2px
+						background-color: transparent
+						background-image: url(../img/icons/check-mark-black-outline.svg)
+						background-repeat: no-repeat
+						background-size: 10px 10px
+						background-position: -6px -6px
+						border: 2px solid #e2e2e2
+						vertical-align: top
+						margin-right: 10px
+					input[type="checkbox"]:checked + label::before
+						background-position: center center
+				.forgout-password
+					position: absolute
+					right: 0 
+					a
+						font-size: 13px
+						text-decoration: underline
+						color: #000
+			button
+				background-color: transparent
+				font-family: "SegoeBold", sans-serif
+				font-size: 12px
+				text-transform: uppercase
+				border: 2px solid $accent
+				border-radius: 2px
+				padding: 8px 25px
+				margin-bottom: 25px
+				margin-top: 10px
+				width: 100%
+				transition: all .35s ease
+				&:hover
+					background-color: $accent
+					color: #fff
+		.bottom-content
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: center
+			span,
+			a
+				font-family: "SegoeRegular", sans-serif
+				font-size: 14px
+				color: #000
+			span
+				margin-right: 5px
+			a
+				text-decoration: underline
+.overlay-modal
+	z-index: 15
+	position: fixed
+	opacity: .35
+	filter: alpha(opacity=80)
+	background-color: #000
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	display: none
+	cursor: pointer
+	
+	
+
+/* End this modal in header */
+
+
 /* Header */
 
 .header
@@ -77,7 +222,7 @@ b, strong
 		display: -o-flex
 		display: flex
 		justify-content: space-between
-		padding: 12px 216px 12px 212px
+		padding: 12px 228px 12px 219px
 		border-bottom: 1px solid #E2E2E2
 		span
 			font-size: 13px
@@ -109,7 +254,8 @@ b, strong
 				padding-left: 15px
 				color: #000
 				border-radius: 2px
-			button
+			button,
+			.button-mobile
 				position: absolute
 				top: 0
 				right: 0
@@ -125,6 +271,11 @@ b, strong
 					width: 16px
 					vertical-align: middle
 					margin-left: 9px
+			.button-mobile
+				display: none
+				padding: 0 10px
+				img
+					margin-left: 0
 			.dropdown
 				position: absolute
 				top: 9px
@@ -132,7 +283,8 @@ b, strong
 				font-size: 14px
 				color: #000
 				cursor: pointer
-				img
+				img,
+				svg
 					width: 8px
 					transform: rotate(90deg)
 					margin-left: 20px
@@ -165,6 +317,8 @@ b, strong
 							&:hover
 								font-family: "SegoeSemiBold", sans-serif
 								color: $accent
+				&.active svg 
+					fill: $accent
 		.wrapper
 			margin-top: 21px
 			.login,
@@ -175,6 +329,7 @@ b, strong
 					width: 24px
 			.login
 				margin-right: 32px
+				margin-left: 24px
 			.basket
 				position: relative
 				.count
@@ -188,24 +343,27 @@ b, strong
 					text-align: center
 					width: 100%
 	&__bottom
-		border-top: 1px solid #E2E2E2
-		border-bottom: 1px solid #E2E2E2
+		border-top: 2px solid #E2E2E2
+		border-bottom: 2px solid #E2E2E2
 		//padding: 0 170px
-		height: 60px
+		height: 65px
 		nav
 			position: relative
+			margin: 0 185px
 			ul
 				list-style-type: none
 				padding: 0
 				margin: 0
 				height: 60px
-				overflow: hidden
+				//overflow: hidden
 				display: flex
 				align-items: center
-				justify-content: center
+				justify-content: space-around
 				li
-					border-right: 1px solid #E2E2E2
-					padding: 21px 37px
+					border-right: 2px solid #E2E2E2
+					padding: 21px 2%
+					text-align: center
+					width: 100%
 					a
 						display: block
 						font-family: "SegoeBold", sans-serif
@@ -213,26 +371,79 @@ b, strong
 						text-transform: uppercase
 						color: #000
 						letter-spacing: 1.6px
+						white-space: nowrap
 						img
-							width: 11px
+							width: 15px
 							background: #E2E2E2
 							float: left
-							margin-top: 6px
-							margin-right: 17px
+							margin-top: 4px
+							//margin-right: 17px	
 					.tel
 						display: block
 						letter-spacing: 1px
 				.catalog
 					margin: 0
 				.contacts
-					line-height: 18px
+					line-height: 16px
 					border: none
+				.mobile-menu
+					display: none
+					.mobile-submenu
+						padding: 20px 30px
+						margin: 0
+						list-style-type: none
+						position: absolute
+						top: 63px
+						left: 19.8%
+						background-color: #fff
+						z-index: 10
+						border: 1px solid #e2e2e2
+						border-top: none
+						width: 255px
+						height: max-content
+						ul
+							display: block
+							height: auto
+							li
+								display: block
+								border: none
+								width: auto
+								padding: 0
+								text-align: left
+								margin-bottom: 15px
+								a
+									transition: all .25s ease
+									&:hover
+										color: $accent
+						.contacts
+							padding: 0
+							margin: 0
+							list-style-type: none
+							display: block
+							li
+								display: block
+								font-family: "SegoeRegular", sans-serif
+								font-size: 13px
+								letter-spacing: 1px
+								img
+									width: 20px
+									vertical-align: top
+								p
+									display: inline-block
+									max-width: 70%
+								a
+									display: inline-block
+									font-family: "SegoeRegular", sans-serif
+									font-size: 13px
+									text-transform: initial
+									letter-spacing: unset
 			.category-dropdown
 				display: none
 				padding: 20px 0
 				position: absolute
-				top: 59px
-				right: 68%
+				top: 63px
+				right: auto
+				left: 0
 				z-index: 3
 				height: 655px
 				width: 320px
@@ -245,7 +456,9 @@ b, strong
 					display: block
 					padding: 0
 					border: none
+					text-align: left
 					margin-bottom: 12px
+					max-width: 70%
 					transition: all .5s ease
 					&::before
 						content: ""
@@ -266,6 +479,9 @@ b, strong
 						fill: $accent
 					&:last-child
 						margin-bottom: 0
+					&:hover .submenu
+						visibility: visible
+						opacity: 1
 					a
 						font-family: "SegoeRegular", sans-serif
 						font-size: 14px
@@ -275,9 +491,52 @@ b, strong
 						color: #131313
 						.arrow
 							position: absolute
-							right: 23px
+							left: calc(100% + 50px)
 							svg
 								width: 8px
+					.submenu
+						position: absolute
+						display: block
+						z-index: 10
+						left: 265px
+						top: -19px
+						width: 250px
+						height: max-content
+						background-color: #fff
+						padding: 20px
+						border: 1px solid #e2e2e2
+						visibility: hidden
+ 						opacity: 0
+						.submenu
+							top: -21px
+							left: calc(100% + 81px)
+							opacity: 0
+							visibility: hidden
+						li
+							a
+								display: block
+								font-family: "SegoeRegular", sans-serif
+								font-size: 14px
+								text-transform: capitalize
+								color: #000
+								transition: all .5s ease
+								.arrow-right
+									position: absolute
+									left: calc(100% + 45px)
+									svg
+										width: 8px!important
+								&:hover
+									font-family: "SegoeSemiBold", sans-serif
+									color: $accent
+								&:hover .arrow-right svg 
+									fill: $accent
+							&::before
+								content: ""
+								display: none
+							&:hover .submenu
+								visibility: visible
+								opacity: 1
+						
 				.timeline
 					position: relative
 					height: 100%
@@ -349,7 +608,7 @@ b, strong
 			color: #fff
 	.wrapper
 		position: absolute
-		left: 165px
+		left: 24%
 		top: 95px
 	img.slider-object
 		width: 100%
@@ -2484,6 +2743,7 @@ nav.breadcrumb
 
 .footer
 	&__top
+		position: relative
 		border-top: 2px solid #E2E2E2
 		border-bottom: 2px solid #E2E2E2
 		margin-bottom: 20px
@@ -2513,6 +2773,24 @@ nav.breadcrumb
 					line-height: 17px
 					margin-bottom: 0
 					color: #000
+		.ar
+			display: none
+			padding: 0
+			margin: 0
+			list-style-type: none
+			position: absolute
+			top: 24px
+			width: 100%
+			li
+				position: absolute
+				img
+					width: 15px
+				&.prev
+					left: 50px
+					img
+						transform: rotate(180deg)
+				&.next
+					right: 50px
 	&__bottom
 		background-color: #333
 		padding: 60px 180px 10px 180px
