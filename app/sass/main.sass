@@ -235,7 +235,46 @@ b, strong
 			a
 				color: $text
 	&__middle
+		position: relative
 		padding: 30px 135px 30px 204px
+		form.mobile-search
+			display: none
+			position: absolute
+			top: 80px
+			left: 50%	
+			transform: translate(-41%)
+			width: 100%
+			z-index: 110
+			input,
+			button
+				outline: none
+				border: none
+			input
+				font-size: 14px
+				background-color: #fff
+				height: 40px
+				width: 81%
+				border: 1px solid #969696
+				padding-left: 15px
+				color: #000
+				border-radius: 2px
+			button
+				display: block
+				position: absolute
+				top: 0
+				right: 60px
+				font-family: "SegoeSemiBold", sans-serif
+				font-size: 14px
+				background-color: $accent
+				color: #fff
+				border-radius: 0 2px 2px 0
+				height: 40px
+				padding: 0 12px
+				padding-bottom: 3px
+				img
+					width: 16px
+					vertical-align: middle
+					margin-left: 0
 		form
 			position: relative
 			margin-top: 13px
@@ -254,6 +293,8 @@ b, strong
 				padding-left: 15px
 				color: #000
 				border-radius: 2px
+				&::placeholder
+					color: #000
 			button,
 			.button-mobile
 				position: absolute

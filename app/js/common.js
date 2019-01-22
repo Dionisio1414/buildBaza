@@ -469,13 +469,20 @@ $(function() {
 		$(this).addClass('active').siblings().removeClass('active');
 	});
 	
-	
 	// mobile menu
 	
 	var $menuBtn = $('.header__bottom nav ul li:not(.catalog).mobile-menu');
 	$menuBtn.click(function(e) {
 		e.preventDefault();
 		$(this).find('.mobile-submenu').slideToggle();
+	});
+	
+	// mobile search input
+	
+	var $searchBtn = $('.header__middle .wrapper .search img');
+	var $inputSearch = $('.header__middle form.mobile-search');
+	$searchBtn.click(function() {
+		$inputSearch.fadeToggle();
 	});
 	
 });
