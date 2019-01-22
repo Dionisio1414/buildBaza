@@ -19,8 +19,35 @@
 		&__bottom 
 			nav
 				margin: 0 70px
+
+	// home page
+	
+	.home-slider 
+		.wrapper
+			left: 12%
+
+	.product
+		&__slider
+			margin: 0 90px
+
+	.partners
+		margin-left: 90px
+		margin-right: 90px
+
+	.plumbing
+		margin-left: 90px
+		margin-right: 90px
+	
+	.specification 
+		.wrapper
+			margin: 0 90px
+
+	// end home page
+	
+	
 	.footer	
 		&__bottom 
+			padding: 60px 90px 10px 90px
 			.right-part
 				.footer-border-right
 					&::after
@@ -29,15 +56,94 @@
 						height: 0
 	
 @media screen and (max-width: 1440px)
+	// card-products
+
+	.card-item
+		.description 
+			a
+				font-size: 13px
+		.bottom-part 
+			.price 
+				.old-price,
+				.new-price
+					font-size: 14px!important
+				.old-price
+					margin-left: 15px!important
+				.new-price
+					margin-right: 15px!important
+			.button-container 
+				.buy
+					padding: 6px 30px!important
+		.image 
+			a 
+				img
+					width: 165px
+					height: 165px
+
+	// end card products 
+
+	// plumbing slide
+
+	.plumbing__slider 
+		.plumbing-slide 
+			.caption
+				font-size: 14px
+			.container-image
+				width: 130px
+	
+	// end plumbing slide
+
 	.header
 		&__middle
 			padding: 30px 56px 30px 82px
+
+
 	.footer
 		&__top 
 			.ft-slider
 				margin: 0 141px
 
 @media screen and (max-width: 1366px)
+	// card-products
+
+	.card-item
+		.description 
+			width: 185px!important
+	
+	// end card-products
+
+
+	// home page
+
+	.product
+		&__slider
+			margin: 0 80px
+
+	.home-slider
+		.wrapper
+			top: 70px
+			left: 12%	
+			h1
+				font-size: 29px
+				//margin-bottom: 26px
+			p
+				font-size: 18px
+				span
+					font-size: 18px
+			.more
+				font-size: 12px
+				padding-top: 10px
+				padding-bottom: 10px
+	.partners
+		margin-left: 79px
+		margin-right: 79px
+
+	.specification 
+		.wrapper
+			margin: 0 79px
+
+	// end home page
+	
 	.header
 		&__top
 			padding: 12px 78px 12px 71px
@@ -62,6 +168,7 @@
 							img
 								width: 11px
 								margin-top: 5px
+		
 	.footer
 		&__top 
 			.ft-slider
@@ -89,7 +196,43 @@
 							font-size: 12px
 							img
 								margin-top: 4px
-								margin-right: 4px
+								margin-right: 4px	
+	// homepage	
+	.home-slider
+		.slick-dots
+			bottom: 24px
+		img.slider-object
+			margin-left: -50px
+		.wrapper
+			top: 60px
+			left: 6%	
+			h1
+				font-size: 24px
+				line-height: 25px
+				margin-bottom: 15px
+			p
+				font-size: 16px
+				span
+					font-size: 18px
+			.more
+				font-size: 12px
+				padding-top: 8px
+				padding-bottom: 8px
+	.product
+		&__slider
+			margin: 0px 20px
+	.partners
+		margin-left: 20px
+		margin-right: 20px
+	.plumbing
+		margin-left: 20px
+		margin-right: 20px
+	.specification 
+		.wrapper
+			margin: 0 25px
+	
+	// end homepage
+
 	.footer
 		&__top 
 			.ft-slider
@@ -179,6 +322,38 @@
 										left: calc(100% + 145px)
 							.submenu
 								left: calc(100% + 185px)
+	// homepage	
+	.partners
+		&__container
+			margin-bottom: 30px
+	.product
+		margin: 0 80px
+	.home-slider
+		background-position: 50% 0
+		padding-bottom: 0
+		.slick-slide
+			height: 500px
+		.slick-dots
+			bottom: 40px
+		.wrapper
+			top: 125px
+			left: 9%
+			h1
+				font-size: 24px
+				margin-bottom: 15px
+			.more
+				font-size: 14px
+				padding-top: 12px
+				padding-bottom: 11px
+		img.slider-object
+			position: absolute
+			top: 70px
+			height: 335px
+			left: -10px
+			width: 500px
+			max-width: 158%
+
+	// end homepage
 	.footer
 		.footer-border-right
 			&::after
@@ -229,6 +404,7 @@
 					font-size: 14px
 					letter-spacing: unset
 	
+	
 +media-breakpoint-down(sm)
 	.header
 		&__middle 
@@ -261,6 +437,45 @@
 								margin-top: 5px
 								margin-right: 0
 								width: 13px
+	// homepage	
+	.home-slider 
+		img.slider-object
+			top: 90px
+			left: 41px
+			width: 330px
+			height: 256px
+		.wrapper 
+			h1
+				font-size: 18px
+				line-height: 20px
+				margin-bottom: 10px
+			p
+				font-size: 14px
+				margin-bottom: 20px
+				line-height: 20px
+				span
+					font-size: 16px
+			.more
+				font-size: 12px
+				padding-top: 9px
+				padding-bottom: 9px
+	.product 
+		margin: 0 13px
+		.container
+			max-width: 100%
+		.tabs 
+			width: 100%
+			justify-content: space-between
+			> div
+				padding: 9px 33px
+			a
+				white-space: nowrap
+	.plumbing 
+		.caption-row 
+			.wrapper-caption
+				width: 60%
+	
+	//end homepage
 	.footer
 		&__bottom
 			padding: 30px 30px 10px 30px
@@ -300,6 +515,17 @@
 						margin-left: 16px
 	
 +media-breakpoint-down(xs)
+	.modal-form
+		width: 95%
+		padding: 60px 25px 60px 25px
+		form
+			label[for="nameEmail"]
+				max-width: 50%
+				line-height: 17px
+			.remember
+				top: 7px
+			.forgout-password
+				top: -5px
 	.header
 		&__middle
 			.logo
@@ -345,6 +571,71 @@
 								margin-left: auto
 								margin-right: 15px
 								margin-top: 5px
+		
+		
+	// homepage
+
+	.home-slider 
+		.slick-dots
+			display: none!important
+		.wrapper
+			top: 48px
+			left: 0
+			h1
+				font-size: 16px
+				margin-bottom: 240px
+				padding-left: 28px
+				padding-right: 15px
+			p
+				padding-left: 28px
+			.more
+				margin-left: 28px
+		img.slider-object
+			max-width: 100%
+			margin-left: 0
+			top: 100px
+			left: 0
+			width: 300px
+			height: 256px
+			max-width: 100%
+
+	.plumbing 
+		.caption-row 
+			.wrapper-caption
+				width: 100%
+		.load-more
+			display: block
+			margin-top: 20px
+	
+	.product 
+		.tabs
+			.slick-slide
+				//width: 175px!important
+			> div
+				background-color: $accent
+				padding: 9px 20px
+				padding-right: 45px
+				a
+					color: #fff
+		.arrows
+			display: none
+		.load-more
+			display: block
+			margin-top: 10px
+		.arrow-tabs
+			position: absolute
+			display: block
+			background-color: #fff
+			right: 14px
+			li
+				padding: 8px 10px 8px 13px
+	.partners
+		&__container
+			&.last
+				margin-bottom: 0
+	
+	// end homepage
+
 	.footer	
 		&__top
 			.ar 
@@ -418,3 +709,6 @@
 			.logo 
 				img
 					width: 85%
+	.partners
+		&__container
+			background-position: 80px top!important

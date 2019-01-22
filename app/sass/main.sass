@@ -618,7 +618,7 @@ b, strong
 			color: #fff
 	.wrapper
 		position: absolute
-		left: 24%
+		left: 23%
 		top: 95px
 	img.slider-object
 		width: 100%
@@ -631,26 +631,76 @@ b, strong
 /* PRODUCT TABS SECTION */
 
 .product
+	.load-more
+		display: none
+		font-family: "SegoeBold", sans-serif
+		font-size: 12px
+		text-transform: uppercase
+		letter-spacing: 1px
+		text-align: center
+		color: #131313
+		img
+			width: 8px
+			transform: rotate(90deg)
+			margin-left: 6px
+			margin-bottom: 2px
+		span
+			position: relative
+			&::after
+				content: ""
+				position: absolute
+				bottom: -5px
+				left: 0
+				height: 2px
+				width: 0%
+				background-color: $accent
+				transition: all .5s ease
+		&:hover span::after
+			width: 100%
+		&.change
+			img
+				transform: rotate(-90deg)
 	.tabs
 		display: flex
 		border: 1px solid #969696
 		border-radius: 2px
 		margin-bottom: 30px
-		a
-			font-family: "SegoeBold", sans-serif
-			font-size: 16px
-			color: #000
-			letter-spacing: 1px
-			margin-right: 8px
+		> div
 			padding: 9px 40px
-			&:last-child
-				margin-right: 0
+			a
+				font-family: "SegoeBold", sans-serif
+				font-size: 16px
+				color: #000
+				letter-spacing: 1px
+				margin-right: 8px
+				&:last-child
+					margin-right: 0
 			&.active
 				background-color: $accent
+			&.active a
 				color: #fff
+	.arrow-tabs
+		display: none
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li
+			display: inline-block
+			border: 2px solid #e2e2e2
+			border-radius: 2px
+			padding: 10px 12px 10px 15px
+			transition: all .35s ease-in-out
+			img
+				width: 20px
+			&.prev
+				img
+					transform: rotateY(-180deg) 
+			&:hover
+				border-color: $accent
 	&__slider	
 		display: none
 		margin: 0 210px
+		margin-bottom: 30px
 		.card-item	
 			+product-card
 		.slick-slide.active
@@ -726,6 +776,35 @@ b, strong
 .plumbing
 	margin: 0 210px
 	margin-bottom: 70px
+	.load-more
+		display: none
+		font-family: "SegoeBold", sans-serif
+		font-size: 12px
+		text-transform: uppercase
+		letter-spacing: 1px
+		text-align: center
+		color: #131313
+		img
+			width: 8px
+			transform: rotate(90deg)
+			margin-left: 6px
+			margin-bottom: 2px
+		span
+			position: relative
+			&::after
+				content: ""
+				position: absolute
+				bottom: -5px
+				left: 0
+				height: 2px
+				width: 0%
+				background-color: $accent
+				transition: all .5s ease
+		&:hover span::after
+			width: 100%
+		&.change
+			img
+				transform: rotate(-90deg)
 	.caption-row
 		border: 1px solid #ECECEC
 		border-radius: 2px
