@@ -485,6 +485,13 @@ $(function() {
 		$inputSearch.fadeToggle();
 	});
 	
+	// mobile checkout toggle form
+	
+	var $plusMinusBtn = $('.checkout-basket .checkout-form h4 .mobile-toggler');
+	$plusMinusBtn.click(function() {
+		$(this).toggleClass('state-close');
+	});
+	
 });
 
 /* Helper function's */

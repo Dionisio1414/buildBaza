@@ -59,6 +59,23 @@
 		margin: 0px 100px
 
 	// end catalog
+
+
+	// basket page
+
+	.pannier
+		margin: 0 79px
+		margin-bottom: 100px
+
+	// end basket page
+
+	
+	// checkout page
+
+	.checkout-basket
+		margin: 0 100px
+
+	// end checkout page
 	
 	
 	.footer	
@@ -118,8 +135,8 @@
 					font-size: 14px
 				.container-image
 					width: 130px
-	
 	//end catalog
+
 
 	.header
 		&__middle
@@ -187,6 +204,30 @@
 		margin: 0px 74px
 
 	// end catalog
+
+	// basket page
+
+	.pannier
+		margin: 0 60px
+		margin-bottom: 100px
+		.accordion-form 
+			input
+				width: 65%
+
+	// end basket page
+
+
+	// checkout page
+
+	.checkout-basket
+		margin: 0 74px
+		.checkout-form.basket-container 
+			.products-container
+				padding: 20px 0 20px 0px
+				.desc
+					margin-left: 15px
+
+	// end checkout page
 	
 	.header
 		&__top
@@ -285,6 +326,16 @@
 	
 	// end homepage
 
+	
+	// basket page
+
+	.pannier
+		margin: 0 15px
+		margin-bottom: 100px
+
+	// end basket page
+
+
 	// catalog
 	
 	.catalog
@@ -294,6 +345,34 @@
 				width: 100%
 
 	// end catalog
+
+
+	// checkout page
+
+	.checkout-basket
+		margin: 0 25px
+		.checkout-form.delivery,
+		.checkout-form.payment-method,
+		.checkout-form.role-section
+			form 
+				input+label
+					font-size: 13px
+					a
+						font-size: 12px
+		.checkout-form.basket-container 
+			.products-container
+				padding-left: 0
+				.desc
+					margin-left: 10px
+					line-height: 15px
+				.adding-counter
+					margin-left: 10px
+				.delete-card
+					margin-right: 10px
+				.price
+					font-size: 14px
+		
+	// end checkout page
 	
 
 	.footer
@@ -439,6 +518,59 @@
 
 	// end catalog
 
+	// basket page
+
+	.pannier 
+		.table
+			thead
+				th
+					&.name
+						width: 23%
+						padding-left: 17px
+						padding-right: 17px
+					&.count,
+					&.price,
+					&.general-price
+						padding-left: 17px
+						padding-right: 17px
+			tbody
+				td
+					padding-left: 17px
+					padding-right: 17px
+					&.desc
+						font-size: 12px
+					&.price,
+					&.general-price
+						font-size: 14px
+					&.count
+						.delete-card
+							margin-left: 15px
+					&.desc,
+					&.count,
+					&.price,
+					&.general-price
+						padding-left: 17px
+						padding-right: 17px
+		.chance-description
+			width: auto
+		.accordion-form 
+			input
+				width: 75%
+			button
+				display: none
+		
+
+	// end basket page
+
+
+	// checkout page
+
+	.checkout-basket 
+		.checkout-form
+			width: 100%
+
+	// end checkout page
+
 	.footer
 		.footer-border-right
 			&::after
@@ -572,6 +704,43 @@
 				font-size: 12px
 
 	// end catalog
+
+	// basket
+
+	.pannier 
+		.table
+			margin-bottom: 0
+			thead
+				th
+					&.count
+						padding-right: 52px
+			tbody
+				td
+					white-space: normal
+					&.desc
+						white-space: normal
+						p
+							width: 200px
+		.chance-caption
+			margin-top: 25px
+		.accordion-form 
+			input
+				width: 100%	
+
+	// end basket
+
+
+	// checkout
+
+	.checkout-basket 
+		.checkout-form.basket-container 
+			.products-container 
+				.adding-counter
+					margin-left: 0
+				.delete-card
+					margin-right: 0
+
+	// end checkout
 	
 	.footer
 		&__bottom
@@ -742,6 +911,40 @@
 
 	// end catalog
 
+	// basket page
+
+	.pannier 
+		.prices-container
+			width: 100%
+		.chance-accordion 
+			span
+				font-size: 12px
+
+	// end basket page
+
+	// checkout
+
+	.checkout-basket 
+		.checkout-form.basket-container 
+			.products-container 
+				.adding-counter
+					margin-top: 5px
+					margin-left: 40%
+				.delete-card
+					margin-top: 9px
+					margin-right: 10%
+				.desc
+					font-size: 14px
+			.prices-container 
+				.price-text,
+				.price
+					margin: 0
+					font-size: 14px
+	
+	.checkout-basket .checkout-form h4 .mobile-toggler
+		display: block
+	// end checkout
+
 	.footer	
 		&__top
 			.ar 
@@ -803,6 +1006,22 @@
 				border-bottom: 2px solid #e2e2e2
 	
 @media screen and (max-width: 425px)
+	
+	// breadcrumbs
+
+	nav.breadcrumb
+		padding: 0 30px
+		padding-right: 0
+		ol.breadcrumb 
+			.breadcrumb-item 
+				a
+					font-size: 11px
+					letter-spacing: 0
+		.breadcrumb-caption
+			font-size: 14px
+
+	// end breadcrumbs
+	
 	.header
 		&__middle 
 			.logo 
@@ -820,6 +1039,39 @@
 				padding-bottom: 6px
 	
 	// end catalog
+
+
+	// basket page
+
+	.pannier 
+		.chance-accordion
+			padding: 8px 12px
+			span
+				img
+					margin-left: 5px
+
+	// end basket page
+
+
+	// checkout
+
+	.checkout-basket 
+		.checkout-form.basket-container 
+			.products-container 
+				.adding-counter
+					margin-top: 5px
+					margin-left: 6%
+				.delete-card
+					margin-top: 9px
+					margin-right: 10%
+				.desc
+					font-size: 14px
+				img
+					margin-bottom: 20px
+
+	// end checkout
+
+		
 		
 @media screen and (max-width: 375px)
 	.header
@@ -850,6 +1102,64 @@
 				margin-right: 10px
 
 	// end catalog
+
+	// basket page
+
+	.pannier 
+		.prices-container 
+			.price-text
+				margin-left: 0
+			.price
+				font-size: 14px
+		.chance-caption
+			font-size: 15px
+		.chance-description
+			font-size: 13px
+
+	// end basket page
+
+	
+	// checkout
+
+	.checkout-basket 
+		.checkout-form.basket-container 
+			.products-container 
+				.adding-counter
+					margin-top: 5px
+					margin-left: 8%
+				.delete-card
+					margin-top: 9px
+					margin-right: 10%
+				.desc
+					font-size: 14px 
+			.prices-container 
+				.price-text,
+				.price
+					font-size: 12px
+					line-height: 14px
+	.checkout-form.delivery,
+	.checkout-form.payment-method,
+	.checkout-form.role-section
+		form 
+			input+label
+				font-size: 12px
+				margin-right: 10px
+	.checkout-form.comment 
+		form 
+			input+label
+				font-size: 12px!important
+				white-space: nowrap
+			button
+				font-size: 11px!important
+	.checkout-form 
+		h4
+			font-size: 12px!important
+			padding: 12px 12px!important
+
+	// end checkout
+
+	.checkout-basket .checkout-form h4 .mobile-toggler
+		left: 0
 
 @media screen and (max-width: 340px)
 	.catalog 
