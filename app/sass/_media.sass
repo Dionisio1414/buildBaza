@@ -289,6 +289,9 @@
 	
 	.catalog
 		margin: 0px 30px
+		.sort-container 
+			.slide-range
+				width: 100%
 
 	// end catalog
 	
@@ -414,6 +417,28 @@
 			max-width: 158%
 
 	// end homepage
+
+	// catalog
+
+	.catalog 
+		.sort-container 
+			.filter-dropdown 
+				h4
+					&.price-caption
+						display: none
+					&.price-caption-mobile
+						display: inline-block
+				form 
+					input+label
+						margin-right: 35px
+						margin-bottom: 11px
+				.category-list
+					border-bottom: 1px solid #e2e2e2
+		.sort-products
+			margin: 0 60px
+
+	// end catalog
+
 	.footer
 		.footer-border-right
 			&::after
@@ -536,6 +561,18 @@
 				width: 60%
 	
 	//end homepage
+
+	// catalog
+
+	.catalog 
+		.sort-products
+			margin: 0
+		.pagination 
+			.pages-count
+				font-size: 12px
+
+	// end catalog
+	
 	.footer
 		&__bottom
 			padding: 30px 30px 10px 30px
@@ -696,6 +733,15 @@
 	
 	// end homepage
 
+	// catalog
+
+	.catalog
+		margin: 0 15px
+		.sort-products
+			margin: 0 20px
+
+	// end catalog
+
 	.footer	
 		&__top
 			.ar 
@@ -762,6 +808,18 @@
 			.logo 
 				img
 					width: 70%
+	// catalog
+
+	.catalog 
+		.sort-container 
+			.order-select
+				margin-right: 0
+				margin-left: auto
+			.digit-select
+				margin-left: auto
+				padding-bottom: 6px
+	
+	// end catalog
 		
 @media screen and (max-width: 375px)
 	.header
@@ -772,3 +830,35 @@
 	.partners
 		&__container
 			background-position: 80px top!important
+
+	// catalog
+
+	.catalog 
+		.sort-container
+			padding: 12px 8px
+			> .container-fluid
+				padding: 0
+			.caption-sort
+				font-size: 11px
+			.filter-btn
+				font-size: 11px
+			.grid-type,
+			.list-type
+				img
+					width: 20px
+			.list-type
+				margin-right: 10px
+
+	// end catalog
+
+@media screen and (max-width: 340px)
+	.catalog 
+		.sort-container 
+			.digit-select
+				margin-top: 15px
+				margin-right: 0
+				margin-left: auto
+			.order-select
+				margin-right: 0
+				margin-left: auto
+	

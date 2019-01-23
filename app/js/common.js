@@ -102,7 +102,7 @@ $(function() {
 		});	
 	});
 	
-	$('.modal-form .modal-close').click(function() {
+	$('.modal-form .modal-close, .overlay-modal').click(function() {
 		$('.modal-form') 
 			.animate({opacity: 0, top: '45%'}, 200,
 				function(){
