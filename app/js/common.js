@@ -58,18 +58,31 @@ $(function() {
 	  slidesToScroll: 1,
 	  asNavFor: '.slider-for',
 	  dots: true,
-	  focusOnSelect: true
+	  focusOnSelect: true,
+	  responsive: [
+			{
+			  breakpoint: 576,
+			  settings: {
+				arrows: true,
+				 dots: false,  
+				//centerMode: true,
+				slidesToShow: 1,  
+				prevArrow: $('.product-inner__arrows li.prev'),
+				nextArrow: $('.product-inner__arrows li.next')  
+			  }
+			}
+		]	
 	});
 	
 	
 	// Product tabs mobile slider
 	
-	var $productTabSlider = $('.product .tabs');
+	var $productTabSlider = $('.product .tabs, .product-inner .tabs');
 	if($(window).width() < 576) {
 		$productTabSlider.slick({
 			slidesToShow: 1,
-			prevArrow: $('.product .arrow-tabs li.prev'),
-			nextArrow: $('.product .arrow-tabs li.next')  
+			prevArrow: $('.product .arrow-tabs li.prev, .product-inner .arrow-tabs li.prev'),
+			nextArrow: $('.product .arrow-tabs li.next, .product-inner .arrow-tabs li.next')  
 		});	
 	}
 	
@@ -127,7 +140,7 @@ $(function() {
 		});	
 	}
 	
-	var $productDescTabs = $(".product-inner .tabs a"),
+	var $productDescTabs = $(".product-inner .tabs > div"),
 		$productText = $('.product-inner .specification-product .wrapper');
 	$productDescTabs.click(function(e) {
 		e.preventDefault();
@@ -424,6 +437,36 @@ $(function() {
 	});
 	
 	
+	var $containerProductInner = $('.related-products-slider.slick-initialized.slick-slider'),
+		$moreProoductInner = $('.product-inner-btn .load-more');
+	var $productInnerHeight = $containerProductInner.height();
+	var $dfProductInnerHeight = 1000;
+	
+	$containerProductInner.css({
+		"max-height": $dfProductInnerHeight,
+		"overflow": "hidden"
+	});
+	
+	$moreProoductInner.click(function(e) {
+		e.preventDefault();
+		var $newHeight = 0;
+		var $btnText = $(this).find('span');
+		$(this).toggleClass('change');
+		if($containerProductInner.hasClass('active')) {
+			$newHeight = 1000;
+			$containerProductInner.removeClass('active');
+			$btnText.text('Показать больше');
+		} else {
+			$newHeight = $productInnerHeight;
+			$containerProductInner.addClass('active');
+			$btnText.text('Скрыть');
+		}
+		
+		$containerProductInner.animate({
+			"max-height": $newHeight
+		}, 500);
+	});
+	
 	// filter dropdown
 	
 	var $filterDropdownButton = $('.catalog .sort-container .filter-btn'),
@@ -444,7 +487,7 @@ $(function() {
 	$filterRange.slider({
 		range: true,
 		min: 0,
-		max: 217,
+		max: 500,
 		values: [ 0, 500 ],
 		slide: function( event, ui ) {
 			$(".catalog .sort-container .filter-dropdown .start-price").html( ui.values[ 0 ] );

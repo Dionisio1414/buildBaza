@@ -25,7 +25,48 @@
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
- 	<header class="header">
+		<!-- Modal registration and authorization -->
+	<div class="modal-form">
+		<span class="modal-close">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 21.9 21.9" enable-background="new 0 0 21.9 21.9" width="512px" height="512px">
+			  <path d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z" fill="#232323"/>
+			</svg>
+		</span>
+		<div class="modal-contents">
+			<h1>вход и регистрация</h1>
+			<form>
+				<div class="form-group">
+					<div class="remember">
+						<input type="checkbox" name="remember" id="remember">
+						<label for="remember">Запомнить</label>
+					</div>
+					<label for="nameEmail">Имя пользователя или e-mail</label>
+					<input type="text" name="nameEmail" id="nameEmail">
+				</div>
+				<div class="form-group">
+					<div class="forgout-password">
+						<a href="#">
+							Забыли пароль?
+						</a>
+					</div>
+					<label for="nameEmail">Пароль</label>
+					<input type="text" name="nameEmail" id="nameEmail">
+				</div>
+				<button type="submit">Вход</button>
+			</form>
+			<div class="bottom-content">
+				<span>Создать новый аккаунт?</span>
+				<a href="#">Зарегистрироватся</a>
+			</div>
+		</div>
+	</div>
+	<div class="overlay-modal"></div> 
+	<!-- End this modal -->
+	
+	<!-- Modal registration -->
+	<!-- End this modal -->
+
+	<header class="header">
 		<div class="header__top">
 			<span><img src="img/icons/location.svg" alt="">
 				г. Харьков, пр. Московский, 247  ул. Победителей, 6а
@@ -35,24 +76,35 @@
 			</span>
 			<span><img src="img/icons/email.svg" alt="">
 				<a href="#">
-					info@bigstroybaza.kh.ua
+								info@bigstroybaza.kh.ua
 				</a>
 			</span>
 		</div>
 		<div class="header__middle">
+			<form class="mobile-search">
+				<input type="text" placeholder="Поиск">
+				<button type="submit">
+					<img src="img/icons/search.svg" alt="">
+				</button>
+			</form>
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-2">
+					<div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-2">
 						<a href="#" class="logo"><img src="img/logo.png" alt="logo" class="img-responsive"></a>
 					</div>
-					<div class="col-8">
+					<div class="col-4 col-sm-7 col-md-7 col-lg-8 col-xl-8 d-none d-sm-block">
 						<form>
 							<input type="text" placeholder="Поиск">
 							<button type="submit">Поиск
 								<img src="img/icons/search.svg" alt="">
 							</button>
+							<button type="submit" class="button-mobile">
+								<img src="img/icons/search.svg" alt="">
+							</button>
 							<span class="dropdown">Категории
-								<img src="img/icons/arrow-down.svg" alt="">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 41.999 41.999" style="enable-background:new 0 0 41.999 41.999;" xml:space="preserve">
+								<path d="M36.068,20.176l-29-20C6.761-0.035,6.363-0.057,6.035,0.114C5.706,0.287,5.5,0.627,5.5,0.999v40  c0,0.372,0.206,0.713,0.535,0.886c0.146,0.076,0.306,0.114,0.465,0.114c0.199,0,0.397-0.06,0.568-0.177l29-20  c0.271-0.187,0.432-0.494,0.432-0.823S36.338,20.363,36.068,20.176z"/>
+								</svg>
 								<ul class="search-category">
 									<li><a href="#">Акции</a></li>
 									<li><a href="#">Общестроительные материалы</a></li>
@@ -76,8 +128,11 @@
 							</span>
 						</form>
 					</div>
-					<div class="col-2">
+					<div class="col-6 col-sm-2 col-md-2 col-lg-2 col-xl-2">
 						<div class="wrapper">
+							<div class="search">
+								<img src="img/icons/search-black.svg" alt="">
+							</div>
 							<div class="login">
 								<img src="img/icons/log-in.svg" alt="">
 							</div>
@@ -97,17 +152,6 @@
 						<a href="#">Каталог
 							<img src="img/icons/list.svg" alt="">
 						</a>
-					</li>
-					<li><a href="#">Главная</a></li>
-					<li><a href="#">Новости</a></li>
-					<li><a href="#">О нас</a></li>
-					<li><a href="#">Оплата и доставка</a></li>
-					<li><a href="#">Контакты</a></li>
-					<li class="contacts">
-						<a href="#" class="tel">+38 (099) 617-85-86</a>
-						<a href="#" class="tel">+38 (067) 159-45-63</a>
-						<a href="#" class="tel">+38 (063) 991-33-43</a>
-					</li>
 					<!-- Category dropdowm menu -->
 					<ul class="category-dropdown">
 						<div class="container">
@@ -234,19 +278,58 @@
 											</svg>
 										</span>
 									</a></li>
-									<li><a href="#">Сантехника
-										<span class="arrow">
-											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-												 viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;"
-												 xml:space="preserve">
-												<g>
-													<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-														L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-														c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
-												</g>
-											</svg>
-										</span>
-									</a></li>
+									<li>
+										<a href="#">Сантехника
+											<span class="arrow">
+												<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													 viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;"
+													 xml:space="preserve">
+													<g>
+														<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+															L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+															c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+													</g>
+												</svg>
+											</span>
+										</a>
+										<ul class="submenu">
+											<li>
+												<a href="#">Канализация и фитинги
+													<span class="arrow-right">
+														<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+															 viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;"
+															 xml:space="preserve">
+															<g>
+																<path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+																	L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+																	c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+															</g>
+														</svg>
+													</span>
+												</a>
+												<ul class="submenu">
+													<li><a href="#">Трубы канализационные</a></li>
+													<li><a href="#">Отводы</a></li>
+													<li><a href="#">Переходы</a></li>
+													<li><a href="#">Клапаны воздушные</a></li>
+													<li><a href="#">Клапаны обратные</a></li>
+													<li><a href="#">Заглушки</a></li>
+													<li><a href="#">Муфты</a></li>
+													<li><a href="#">Ревизия</a></li>
+													<li><a href="#">Тройники</a></li>
+													<li><a href="#">Крестовина</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Смесители</a></li>
+											<li><a href="#">Водонагреватели</a></li>
+											<li><a href="#">Ванны</a></li>
+											<li><a href="#">Компакты</a></li>
+											<li><a href="#">Умывальники</a></li>
+											<li><a href="#">Гидробоксы</a></li>
+											<li><a href="#">Душевые кабины</a></li>
+											<li><a href="#">Поддоны</a></li>
+										</ul>
+									</li>
 									<li><a href="#">Строительная химия
 										<span class="arrow">
 											<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -331,6 +414,50 @@
 						</div>
 					</ul>
 					<!-- End category dropdowm menu -->
+					</li>
+					<li class="mobile-menu">
+						<a href="#">Меню
+							<img src="img/icons/list.svg" alt="">
+						</a>
+						<div class="mobile-submenu">
+							<ul>
+								<li><a href="#">Главная</a></li>
+								<li><a href="#">Новости</a></li>
+								<li><a href="#">О нас</a></li>
+								<li><a href="#">Оплата и доставка</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+							<ul class="contacts">
+								<li><img src="img/icons/location.svg" alt="">
+									<p>
+										г. Харьков, пр. 
+										Московский, 247  
+										ул. Победителей, 6а
+									</p>
+								</li>
+								<li><img src="img/icons/clock.svg" alt="">
+									<p>
+										пн - пт с 9:00 до 18:00 сб с 9:00 до 14:00
+									</p>
+								</li>
+								<li><img src="img/icons/email.svg" alt="">
+									<a href="#">
+										info@bigstroybaza.kh.ua
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Новости</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Оплата и доставка</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li class="contacts">
+						<a href="#" class="tel">+38 (099) 617-85-86</a>
+						<a href="#" class="tel">+38 (067) 159-45-63</a>
+						<a href="#" class="tel">+38 (063) 991-33-43</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -357,7 +484,7 @@
 	<section class="contact">
 		<div class="container-fluid p-0">
 			<div class="row">
-				<div class="col-6">
+				<div class="col-12 col-md-12 col-lg-6 col-xl-6 mb-5 mb-sm-5 mb-md-5 mb-lg-0">
 					<h1>Пр-т Московский, 247(основной склад)</h1>
 					<ul class="adress" style="list-style-image: url(img/list-marker.png);">
 						<li>
@@ -365,10 +492,10 @@
 						</li>
 					</ul>
 					<div class="map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.213637963124!2d36.30925181571397!3d49.96985197941188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270a43cef0a653%3A0xd1e7f4fc3b334f46!2z0KHQuNGC0YDQvtC10L0sINCc0L7RgdC60L7QstGB0LrQuNC5INC_0YDQvtGB0L8uLCAyNDcsINCl0LDRgNGM0LrQvtCyLCDQpdCw0YDRjNC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2MTAwMA!5e0!3m2!1sru!2sua!4v1547723054501" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.213637963124!2d36.30925181571397!3d49.96985197941188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270a43cef0a653%3A0xd1e7f4fc3b334f46!2z0KHQuNGC0YDQvtC10L0sINCc0L7RgdC60L7QstGB0LrQuNC5INC_0YDQvtGB0L8uLCAyNDcsINCl0LDRgNGM0LrQvtCyLCDQpdCw0YDRjNC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2MTAwMA!5e0!3m2!1sru!2sua!4v1547723054501" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 				</div>
-				<div class="col-6">
+				<div class="col-12 col-md-12 col-lg-6 col-xl-6">
 					<h1>Пр-т Московский, 247(основной склад)</h1>
 					<ul class="adress" style="list-style-image: url(img/list-marker.png);">
 						<li>
@@ -376,12 +503,12 @@
 						</li>
 					</ul>
 					<div class="map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.213637963124!2d36.30925181571397!3d49.96985197941188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270a43cef0a653%3A0xd1e7f4fc3b334f46!2z0KHQuNGC0YDQvtC10L0sINCc0L7RgdC60L7QstGB0LrQuNC5INC_0YDQvtGB0L8uLCAyNDcsINCl0LDRgNGM0LrQvtCyLCDQpdCw0YDRjNC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2MTAwMA!5e0!3m2!1sru!2sua!4v1547723054501" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.213637963124!2d36.30925181571397!3d49.96985197941188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270a43cef0a653%3A0xd1e7f4fc3b334f46!2z0KHQuNGC0YDQvtC10L0sINCc0L7RgdC60L7QstGB0LrQuNC5INC_0YDQvtGB0L8uLCAyNDcsINCl0LDRgNGM0LrQvtCyLCDQpdCw0YDRjNC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2MTAwMA!5e0!3m2!1sru!2sua!4v1547723054501" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-4">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
 					<div class="contact-container">
 						<h4>Отдел продаж:</h4>
 						<ul>
@@ -411,7 +538,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
 					<div class="contact-container">
 						<h4>Отдел закупок:</h4>
 						<ul>
@@ -429,8 +556,8 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-4">
-					<div class="contact-container">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+					<div class="contact-container last">
 						<h4>Бухгалтерия:</h4>
 						<ul>
 							<li><img src="img/icons/clock.svg" alt="">
@@ -485,11 +612,19 @@
 					</div>
 				</div>
 			</div>
+			<ul class="ar">
+				<li class="prev">
+					<img src="img/icons/right-arrow.svg" alt="">
+				</li>
+				<li class="next">
+					<img src="img/icons/right-arrow.svg" alt="">
+				</li>
+			</ul>
 		</div>
 		<div class="footer__bottom">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-6 footer-border-right p-0">
+					<div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 footer-border-right p-0">
 						<h4>Контакты</h4>
 						<ul class="contacts">
 							<li><img src="img/icons/location.svg" alt="">
@@ -509,9 +644,9 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-6 p-0">
-						<div class="row">
-							<div class="col-6">
+					<div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 p-0">
+						<div class="row right-part">
+							<div class="col-md-12 col-lg-6 col-xl-6 footer-border-right">
 								<h4 style="margin-left: 80px">Меню</h4>
 								<ul class="menu">
 									<li><a href="#">Главная</a></li>
@@ -521,8 +656,8 @@
 									<li><a href="#">Контакты</a></li>
 								</ul>
 							</div>
-							<div class="col-6">
-								<h4>Подписаться на рассылку</h4>
+							<div class="col-md-12 col-lg-6 col-xl-6">
+								<h4 class="form-caption">Подписаться на рассылку</h4>
 								<form>
 									<input type="text" name="share" placeholder="Введите Ваш e-mail">
 									<button type="submit">
@@ -537,12 +672,12 @@
 			<div class="copyright-container">
 				<div class="container-fluid p-0">
 					<div class="row">
-						<div class="col-6">
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 							<p class="copyright">
 								 Bigstroybaza © 2015-2016 . All rights reserved.
 							</p>
 						</div>
-						<div class="col-6">
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 							<div class="us-logo">
 								<p>Разработка  и создание <br/>сайтов Unit Space. ©</p>
 								<a href="#">
