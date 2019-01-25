@@ -150,7 +150,8 @@ $(function() {
 	
 	
 	// tabs cabinet
-	
+	var $breadcrumbCabinetVal = $('nav.breadcrumb.breadcrumb-cabinet .breadcrumb-caption');
+	console.log($breadcrumbCabinetVal);
 	var $cabinetLi = $('.personal-cabinet .navigation-block .navigation li'),
 		$contentArea = $('.personal-cabinet .content-cabinet > div');
 	var $captionBreadcrumb = $('nav.breadcrumb .breadcrumb-caption'),
@@ -160,6 +161,26 @@ $(function() {
 		$(this).addClass('active').siblings().removeClass('active');
 		$captionBreadcrumb.text($activeLi);
 		$contentArea.removeClass('active').eq($(this).index()).addClass('active');
+		switch($(this).index()) {
+			case 0:
+				$breadcrumbCabinetVal.text('Мой аккаунт');
+				break;
+			case 1:
+				$breadcrumbCabinetVal.text('Редактировать аккаунт');
+				break;
+			case 2:
+				$breadcrumbCabinetVal.text('Смена пароля');
+				break;
+			case 3:
+				$breadcrumbCabinetVal.text('Адреса доставки');
+				break;
+			case 4:
+				$breadcrumbCabinetVal.text('История заказов');
+				break;
+			case 5:
+				$breadcrumbCabinetVal.text('Выход');
+				break;
+		}
 	});
 	
 	

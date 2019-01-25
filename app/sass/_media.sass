@@ -105,7 +105,37 @@
 
 	// end contacts page
 	
+
+	// payment delivery
+
+	.payment-delivery
+		margin: 0 100px 60px 100px
+
+	// end payment delivery
+
+	// about us
+
+	.about-us
+		margin: 0 100px
+
+	// end about us
+
 	
+	// news
+
+	.news
+		margin: 0 100px
+
+	// end news
+
+	// personal cabinet
+
+	.personal-cabinet
+		margin: 0 100px
+		margin-bottom: 450px
+
+	// end personal cabinet
+
 	.footer	
 		&__bottom 
 			padding: 60px 90px 10px 90px
@@ -307,6 +337,41 @@
 	// end contacts page
 
 
+	
+	// payment delivery
+
+	.payment-delivery
+		margin: 0 74px 60px 74px
+
+	// end payment delivery
+
+	
+
+	// about us
+
+	.about-us
+		margin: 0 74px
+
+	// end about us
+
+
+	// news
+
+	.news
+		margin: 0 74px
+
+	// end news
+
+
+	// personal cabinet
+
+	.personal-cabinet
+		margin: 0 74px
+		margin-bottom: 450px
+
+	// end personal cabinet
+
+
 	.header
 		&__top
 			padding: 12px 78px 12px 71px
@@ -486,7 +551,59 @@
 			margin-top: 3rem
 
 	// end contacts page
+
+
+	// 404
+
+	.error-page 
+		h1
+			font-size: 170px
+		p
+			font-size: 14px
+		.back,
+		.main
+			width: 172px
+
+	// end 404
 	
+
+	// payment delivery
+
+	.payment-delivery
+		margin: 0 30px 60px 30px
+
+	// end payment delivery
+
+	
+	// about us
+
+	.about-us
+		margin: 0 30px
+
+	// end about us
+
+	
+	// news
+
+	.news
+		margin: 0 30px
+		&__data
+			width: 100%
+		&__container 
+			.news-description
+				max-width: 100%
+
+	// end news
+
+
+	// personal cabinet
+
+	.personal-cabinet
+		margin: 0 30px
+		margin-bottom: 450px
+
+	// end personal cabinet
+
 
 	.footer
 		&__top 
@@ -520,6 +637,14 @@
 						width: 110px
 						height: 45px
 						margin-left: 15px
+	
+@media screen and (max-width: 1042px)
+	// 404
+
+	.error-page 
+		background-position: 48%!important
+
+	// end 404
 		
 +media-breakpoint-down(md)
 	.header
@@ -730,6 +855,67 @@
 
 	// end contacts 
 
+	// 404
+
+	.error-page 
+		background-position: 50%!important
+
+	// end 404
+
+	// payment delivery
+
+	.payment-delivery
+		p
+			max-width: 100%
+
+	// end payment delivery
+
+
+	// about us
+
+	.about-us
+		margin: 0 30px
+		p
+			max-width: 100%
+
+	// end about us
+
+
+	// news page
+
+	.news
+		&__data 
+			span
+				font-size: 14px
+
+	// end news page
+
+
+	// personal cabinet
+
+	.personal-cabinet 
+		.my-account 
+			p
+				max-width: 100%
+		form
+			label
+				font-size: 12px!important
+		.change-password 
+			form 
+				label
+					white-space: normal
+		.adress-delivery, 
+		.change-password, 
+		.edit-account, 
+		.exit-account, 
+		.story-orders 
+			button
+				padding: 6px 28px	
+	
+	// end personal cabinet
+	
+
+
 	.footer
 		.footer-border-right
 			&::after
@@ -861,6 +1047,17 @@
 		.pagination 
 			.pages-count
 				font-size: 12px
+		.sort-container 
+			.filter-dropdown 
+				.brand-caption
+					display: none
+				.brand-caption-mobile
+					display: inline-block
+					margin-top: 30px
+					+ form
+						border-bottom: 1px solid #e2e2e2
+				.price-caption-mobile
+					margin-top: 30px
 
 	// end catalog
 
@@ -932,7 +1129,35 @@
 			width: 75%
 
 	// end contacts
-	
+
+
+	// personal cabinet
+
+	.personal-cabinet 
+		.navigation-block
+			width: 50%
+		.adress-delivery, 
+		.change-password, 
+		.edit-account, 
+		.exit-account, 
+		.story-orders 
+			h3
+				padding-left: 0
+		.adress-delivery 
+			p
+				padding-left: 0
+			.wrapper-third 
+				h4
+					margin-left: 0
+				.desc
+					margin-left: 0
+		.exit-account 
+			p
+				padding-left: 0
+
+	// end personal cabinet
+
+
 	.footer
 		&__bottom
 			padding: 30px 30px 10px 30px
@@ -1028,6 +1253,10 @@
 								margin-left: auto
 								margin-right: 15px
 								margin-top: 5px
+					.mobile-menu 
+						.mobile-submenu
+							left: auto
+							right: 0
 		
 		
 	// homepage
@@ -1218,11 +1447,110 @@
 				.numbers 
 					a
 						width: 140px
+		ul.adress
+				li
+					line-height: 15px
 		.map
 			iframe
 				height: 350px
 
 	// end contacts
+
+
+	// 404
+
+	.error-page 
+		background-position: 50.5%!important
+		h1
+			font-size: 120px
+			line-height: 120px
+		p
+			font-size: 14px
+			letter-spacing: 0
+		.back,
+		.main
+			float: none
+			width: 200px
+
+	// end 404
+
+
+	// payment delivery
+
+	.payment-delivery
+		p
+			line-height: 15px
+		ul 
+			li
+				line-height: 18px
+
+	// end payment delivery
+
+
+	// about us
+
+	.about-us
+		margin: 0 30px
+		ul
+			li
+				max-width: 100%
+				line-height: 15px
+
+	// end about us
+
+
+	// news page
+
+	.news
+		&__container 
+			.comments-container
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				flex-direction: column
+			h1
+				margin-bottom: 10px
+
+	// end news page
+
+
+	// personal cabinet
+	
+	.personal-cabinet 
+		.navigation-block
+			width: 75%
+			margin: 0 auto
+		.my-account 
+			max-width: 75%
+			margin: 0 auto
+			p
+				font-size: 13px
+		.edit-account,
+		.change-password,
+		.adress-delivery,
+		.story-orders
+			max-width: 75%
+			margin: 0 auto
+		.adress-delivery 
+			.wrapper-third 
+				.desc 
+					a.delete,
+					a.edit
+						padding: 6px 0
+						width: 150px
+		.story-orders 
+			.wrapper-second 
+				.adress-delivery
+					margin-left: 0
+					margin-right: 0
+					max-width: 100%
+						
+
+	// end personal cabinet
+
+
 
 	.footer	
 		&__top
@@ -1322,6 +1650,10 @@
 			.digit-select
 				margin-left: auto
 				padding-bottom: 6px
+			.filter-dropdown 
+				form 
+					input+label
+						margin-right: 0
 	
 	// end catalog
 
@@ -1392,6 +1724,57 @@
 		margin: 0 60px
 		
 	// end product inner
+
+	
+	// news page
+
+	.news 
+		.adding-comment 
+			form 
+				button
+					padding: 5px 40px
+		.comments 
+			.comment-block 
+				.user-comment
+					padding-right: 0
+
+	// end news page
+
+
+	// personal cabinet
+	
+	.personal-cabinet 
+		.navigation-block
+			width: 85%
+		.my-account,
+		.edit-account,
+		.change-password,
+		.adress-delivery,
+		.story-orders
+			max-width: 85%
+		.adress-delivery 
+			.wrapper-third 
+				.desc 
+					a.delete,
+					a.edit
+						width: 130px
+		.story-orders 
+			.wrapper-second 
+				.adress-delivery
+					.desc
+						padding-left: 11px
+
+	// end personal cabinet 
+
+
+@media screen and (max-width: 386px)
+	
+	// 404
+
+	.error-page 
+		background-position: 51%!important
+
+	// end 404
 	
 @media screen and (max-width: 375px)
 	.header
@@ -1420,7 +1803,16 @@
 					width: 20px
 			.list-type
 				margin-right: 10px
-
+			.filter-dropdown 
+				form 
+					input+label
+						font-size: 12px
+						margin-right: 0
+						&::before
+							width: 16px
+							height: 16px
+							margin-right: 6px
+							vertical-align: sub
 	// end catalog
 
 	// basket page
@@ -1493,6 +1885,55 @@
 		margin: 0 28px
 
 	// end product inner
+
+
+	// news
+
+	.news
+		&__data 
+			span
+				font-size: 12px
+		&__container 
+			.more
+				font-size: 11px
+
+	// end news
+
+
+	// personal cabinet
+	
+	.personal-cabinet 
+		.navigation-block
+			width: 100%
+		.my-account,
+		.edit-account,
+		.change-password,
+		.adress-delivery,
+		.story-orders
+			max-width: 100%
+		.adress-delivery, 
+		.change-password, 
+		.edit-account, 
+		.exit-account, 
+		.story-orders 
+			button
+				font-size: 11px
+				padding: 6px 17px
+		.adress-delivery
+			.wrapper-third 
+				.desc 
+					padding-left: 11px
+					a.delete,
+					a.edit
+						padding: 6px 0
+						width: 110px
+						font-size: 10px
+					.user-info
+						li
+							font-size: 12px
+							margin-bottom: 0
+
+	// end personal cabinet
 
 @media screen and (max-width: 340px)
 	.catalog 
