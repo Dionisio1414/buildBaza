@@ -2,7 +2,7 @@ $(function() {
 	$('.home-slider').slick({
 		dots: true
 	});
-	$('.product__slider.active').slick({
+	$('.product__slider').slick({
 		prevArrow: $('.product .arrows li.prev'),
 		nextArrow: $('.product .arrows li.next')
 	});
@@ -136,7 +136,10 @@ $(function() {
 			$(this).addClass('active').siblings().removeClass('active');
 			$sliders.removeClass('active').eq($(this).index()).addClass('active');
 			$('.product__slider').slick('setPosition');
-			$('.product__slider').slick();
+			//$('.product__slider').slick({
+			//	prevArrow: $('.product .arrows li.prev'),
+			//	nextArrow: $('.product .arrows li.next')
+			//});
 		});	
 	}
 	
@@ -286,12 +289,12 @@ $(function() {
 	
 	// hover main menu
 	
-	var $liCategories = $('.header__bottom nav ul li.catalog');
-	var $categoryDropdown = $('.header__bottom nav .category-dropdown');
-	$liCategories.hover(function() {
-		$categoryDropdown.delay(800).slideToggle();
-	})
-	
+//	var $liCategories = $('.header__bottom nav ul li.catalog');
+//	var $categoryDropdown = $('.header__bottom nav .category-dropdown');
+//	$liCategories.on(function() {
+//		$categoryDropdown.delay(800).slideToggle();
+//	})
+//	
 	
 	// hover plumbing
 	
@@ -556,6 +559,8 @@ $(function() {
 		$(this).toggleClass('state-close');
 		$(this).parent().parent().find('form, .form-basket').slideToggle();
 	});
+	
+	//console.log($('.product__slider'));
 	
 });
 

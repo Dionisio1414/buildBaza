@@ -1002,10 +1002,26 @@
 								width: 13px
 				.category-dropdown 
 					left: -3%
+					width: 270px
+					height: 590px
 					li 
 						a 
+							font-size: 12px
 							.arrow
-								left: calc(100% + 145px)
+								left: calc(100% + 125px)
+						&::before
+							left: -26.5px
+						.submenu 
+							left: 224px
+							width: 200px
+							li 
+								margin-bottom: 8px 
+								a
+									font-size: 12px
+									.arrow-right
+										left: calc(100% + 95px)
+							.submenu
+								left: calc(100% + 115px)
 		
 	// homepage	
 	.home-slider 
@@ -1265,6 +1281,25 @@
 						.mobile-submenu
 							left: auto
 							right: 0
+				.category-dropdown
+					left: 0
+					width: 100%
+					height: max-content
+					li
+						a
+							font-size: 14px
+						&::before
+							left: -49.2px
+						.submenu
+							position: static
+							border: none
+							.submenu
+								display: none
+							li
+								a
+									font-size: 14px
+								&:hover .submenu
+									display: block
 		
 		
 	// homepage

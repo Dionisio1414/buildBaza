@@ -509,8 +509,8 @@ b, strong
 					border: none
 					text-align: left
 					margin-bottom: 12px
-					max-width: 70%
-					transition: all .5s ease
+					max-width: 100%
+					transition: all .1s ease
 					&::before
 						content: ""
 						position: absolute
@@ -542,7 +542,7 @@ b, strong
 						color: #131313
 						.arrow
 							position: absolute
-							left: calc(100% + 50px)
+							left: 89%
 							svg
 								width: 8px
 					.submenu
@@ -555,12 +555,13 @@ b, strong
 						height: max-content
 						background-color: #fff
 						padding: 20px
+						padding-right: 0
 						border: 1px solid #e2e2e2
 						visibility: hidden
  						opacity: 0
 						.submenu
 							top: -21px
-							left: calc(100% + 81px)
+							left: 100%
 							opacity: 0
 							visibility: hidden
 						li
@@ -573,7 +574,7 @@ b, strong
 								transition: all .5s ease
 								.arrow-right
 									position: absolute
-									left: calc(100% + 45px)
+									left: 85%
 									svg
 										width: 8px!important
 								&:hover
@@ -599,6 +600,10 @@ b, strong
 						height: 98%
 						background-color: #ECECEC
 						top: 6px
+
+	
+.header__bottom nav ul .catalog:hover .category-dropdown
+	display: block
 
 /* End header */
 
