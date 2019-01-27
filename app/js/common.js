@@ -554,6 +554,7 @@ $(function() {
 	var $plusMinusBtn = $('.checkout-basket .checkout-form h4 .mobile-toggler');
 	$plusMinusBtn.click(function() {
 		$(this).toggleClass('state-close');
+		$(this).parent().parent().find('form, .form-basket').slideToggle();
 	});
 	
 });

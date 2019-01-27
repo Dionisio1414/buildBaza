@@ -690,6 +690,7 @@
 						&.mobile-menu
 							display: block
 				.category-dropdown
+					left: -2%
 					li
 						display: block!important
 						a
@@ -999,6 +1000,13 @@
 								margin-top: 5px
 								margin-right: 0
 								width: 13px
+				.category-dropdown 
+					left: -3%
+					li 
+						a 
+							.arrow
+								left: calc(100% + 145px)
+		
 	// homepage	
 	.home-slider 
 		img.slider-object
@@ -1345,6 +1353,11 @@
 	// checkout
 
 	.checkout-basket 
+		.checkout-form 
+			h4
+				margin-bottom: 0
+			form
+				padding: 30px 25px 15px 25px
 		.checkout-form.basket-container 
 			.products-container 
 				.adding-counter
