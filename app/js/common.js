@@ -187,6 +187,29 @@ $(function() {
 	});
 	
 	
+	// adress delivery wrapper's
+	
+	var $newAdr = $('.personal-cabinet .adress-delivery button:last-child');
+	$newAdr.click(function() {
+		$(this).closest('.wrapper-one').hide('fast');
+		$('.personal-cabinet .adress-delivery .wrapper-second').show('fast');
+	});
+	
+	var $continueAdr = $('.personal-cabinet .adress-delivery .wrapper-second button:last-child');
+	console.log($continueAdr);
+	$continueAdr.click(function(e) {
+		e.preventDefault();
+		$(this).closest('.wrapper-second').hide('fast');
+		$('.personal-cabinet .adress-delivery .wrapper-third').show('fast');
+	});
+	
+	// story orders
+	
+	var $storyPayments = $('.personal-cabinet .story-orders .wrapper-first table tbody td .view');
+	$storyPayments.click(function() {
+		$(this).closest('.wrapper-first').hide('fast');
+		$('.personal-cabinet .story-orders .wrapper-second').show('fast');
+	});
 	
 	// counter for products
 	
@@ -527,7 +550,7 @@ $(function() {
 	    $filterRange.slider('values',1,$(this).val());
 	});
 	
-	// catalog drid template
+	// catalog grid template
 	
 	var $containerGridType = $('.catalog .sort-container .grid-template'),
 		$btnsGridType = $containerGridType.find('span');
@@ -566,6 +589,20 @@ $(function() {
 
 /* Helper function's */
 	
+//var display = function (view) {
+//	 if (view == 'list') {
+//		 $('.item-catalog-list .product-layout').parent().removeClass('col-lg-4').removeClass('col-md-4').removeClass('col-sm-4').removeClass('col-xs-12');
+//		 $('.item-catalog-list .product-layout').removeClass('col-lg-4').removeClass('col-md-4').removeClass('col-sm-4').removeClass('col-xs-12').removeClass('product-grid').addClass('product-list');
+//		 $('ul.display').find('li#list').addClass('selected');
+//		 $('ul.display').find('li#grid').removeAttr('class');
+//	 } else {
+//		$('.item-catalog-list').removeClass('list').addClass('grid');
+//		$('.item-catalog-list .product-layout').parent().addClass('col-lg-4').addClass('col-md-4').addClass('col-sm-4').addClass('col-xs-12');
+//		$('.item-catalog-list .product-layout').removeClass('col-lg-4').removeClass('col-md-4').removeClass('col-sm-4').removeClass('col-xs-12').addClass('product-grid').removeClass('product-list');
+//		$('ul.display').find('li#grid').addClass('selected');
+//		$('ul.display').find('li#list').removeAttr('class');
+//	 } 
+//}
 
 /* End helper function's */
 
