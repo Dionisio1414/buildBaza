@@ -193,6 +193,117 @@ b, strong
 				margin-right: 5px
 			a
 				text-decoration: underline
+	
+.basket-modal
+	width: 383px
+	height: auto
+	background-color: #fff
+	position: fixed
+	top: 0
+	right: 0
+	//display: none
+	//opacity: 0
+	z-index: 20
+	//padding: 60px 100px 60px 100px
+	h1
+		background-color: $accent
+		font-family: "SegoeBold", sans-serif
+		font-size: 14px
+		text-transform: uppercase
+		padding: 15px 20px
+		margin-bottom: 23px
+		color: #fff
+	.modal-contents
+		.total-description
+			margin-top: 20px
+			padding: 15px 0 25px 0
+			.price-text
+				font-family: "SegoeBold", sans-serif
+				font-size: 14px
+				color: #000
+			.price
+				font-family: "SegoeBlack", sans-serif 
+				font-size: 16px
+				text-align: right
+				color: #000
+			a
+				font-family: "SegoeBold", sans-serif
+				font-size: 12px
+				padding: 7px 25px
+				border-radius: 2px
+				border: 2px solid #e2e2e2
+				text-transform: uppercase
+				color: #131313
+				&.basket-in
+					float: left
+				&.payment
+					float: right
+		.form-basket
+			height: 450px
+			.container-fluid
+				> .row	
+					border-bottom: 1px solid #e2e2e2
+					padding-bottom: 30px
+					margin-bottom: 30px
+			.mCSB_scrollTools 
+				.mCSB_draggerRail
+					background-color: transparent
+					border: 1px solid #e2e2e2
+					width: 5px
+				.mCSB_dragger 
+					.mCSB_dragger_bar
+						background-color: #CFCFCF
+						width: 9px
+						height: 7%
+			.desc-product
+				font-size: 12px
+				line-height: 15px
+				margin-bottom: 5px
+				max-width: 68%
+			.del-product
+				position: absolute
+				top: 0
+				right: 25px
+				width: 14px
+				height: 14px
+				cursor: pointer
+				span
+					position: absolute
+					width: 100%
+					height: 1.8px
+					border-radius: 4px
+					background-color: #000
+					bottom: 0
+					&:first-child
+						transform: rotate(45deg)
+					&:last-child
+						transform: rotate(-45deg)
+			.adding-counter
+				display: inline-block
+				float: left
+				.minus,
+				.plus
+					float: left
+					display: inline-block
+					font-family: "SegoeBold", sans-serif
+					font-size: 12px
+					border: 1px solid #e2e2e2
+					padding: 7px 5px
+					cursor: pointer
+					vertical-align: middle
+				input
+					float: left
+					font-family: "SegoeBold", sans-serif
+					font-size: 12px
+					border: 1px solid #e2e2e2
+					width: 35px
+					height: 35px
+					text-align: center	
+			.price
+				font-family: "SegoeSemiBold", sans-serif
+				font-size: 16px
+				text-transform: uppercase
+	
 .overlay-modal
 	z-index: 15
 	position: fixed

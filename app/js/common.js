@@ -363,6 +363,7 @@ $(function() {
 	/* Custom scrollbar for basket container */
 	$('.checkout-basket .checkout-form.basket-container .products-container').mCustomScrollbar();
 	
+	$('.basket-modal .modal-contents .form-basket').mCustomScrollbar();
 	
 	var $delRows = $('.checkout-basket .checkout-form.basket-container .products-container .delete-card');
 	$delRows.click(function() {
