@@ -199,24 +199,52 @@ b, strong
 	height: auto
 	background-color: #fff
 	position: fixed
-	top: 0
-	right: 0
-	//display: none
-	//opacity: 0
+	top: 18.3%
+	right: 11%
+	border: 1px solid #e2e2e2
+	display: none
 	z-index: 20
 	//padding: 60px 100px 60px 100px
 	h1
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
 		background-color: $accent
 		font-family: "SegoeBold", sans-serif
 		font-size: 14px
 		text-transform: uppercase
-		padding: 15px 20px
+		padding: 13px 20px
 		margin-bottom: 23px
+		cursor: pointer
 		color: #fff
+		.close-modal
+			position: relative
+			width: 26px
+			height: 26px
+			border: 2px solid #000
+			border-radius: 50%
+			span
+				position: absolute
+				top: 50%
+				left: 17.41%
+				transform: translate(-50%)
+				width: 70%
+				height: 2px
+				background-color: #000
+				cursor: pointer
+				&:first-child
+					transform: rotate(45deg)
+				&:last-child
+					transform: rotate(-45deg)
 	.modal-contents
 		.total-description
 			margin-top: 20px
 			padding: 15px 0 25px 0
+			padding-left: 10px
 			.price-text
 				font-family: "SegoeBold", sans-serif
 				font-size: 14px
@@ -229,22 +257,28 @@ b, strong
 			a
 				font-family: "SegoeBold", sans-serif
 				font-size: 12px
-				padding: 7px 25px
+				padding: 7px 40px
 				border-radius: 2px
 				border: 2px solid #e2e2e2
 				text-transform: uppercase
+				transition: all .35s ease
 				color: #131313
 				&.basket-in
 					float: left
 				&.payment
 					float: right
+				&:hover
+					border-color: $accent
 		.form-basket
+			padding-left: 20px
 			height: 450px
 			.container-fluid
 				> .row	
 					border-bottom: 1px solid #e2e2e2
 					padding-bottom: 30px
 					margin-bottom: 30px
+			.mCSB_inside>.mCSB_container
+				margin-right: 20px
 			.mCSB_scrollTools 
 				.mCSB_draggerRail
 					background-color: transparent
@@ -263,9 +297,9 @@ b, strong
 			.del-product
 				position: absolute
 				top: 0
-				right: 25px
-				width: 14px
-				height: 14px
+				right: 15px
+				width: 12px
+				height: 12px
 				cursor: pointer
 				span
 					position: absolute
@@ -855,14 +889,18 @@ b, strong
 			&:hover
 				border-color: $accent
 	&__slider	
-		display: none
+		//display: none
 		margin: 0 210px
 		margin-bottom: 30px
 		.card-item	
 			+product-card
 		.slick-slide.active
 			display: block
-	&__slider.active
+	.slide
+		display: none
+	.slide.active
+		display: block
+	//&__slider.active
 		display: block
 	.arrows
 		padding: 0
@@ -1445,7 +1483,7 @@ nav.breadcrumb
 							font-size: 12px
 							border: 1px solid #e2e2e2
 							width: 35px
-							height: 35px
+							height: 33px
 							text-align: center	
 					.delete-card
 						float: right

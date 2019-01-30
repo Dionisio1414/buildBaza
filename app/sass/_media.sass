@@ -208,6 +208,16 @@
 
 @media screen and (max-width: 1366px)
 	
+	.catalog 
+		.sort-products 
+			.card-item.item-list 
+				.bottom-part 
+					.price
+						flex-direction: column
+					.new-price
+						text-align: center
+						margin-right: 0px!important
+	
 	// breadcrumbs
 
 	nav.breadcrumb
@@ -408,6 +418,19 @@
 			padding: 60px 100px 10px 100px
 	
 +media-breakpoint-down(lg)
+	
+	
+	.catalog 
+		.sort-products 
+			.card-item.item-list 
+				.image
+					margin-top: 30px
+					img
+						width: 140px
+						height: 140px
+				.description
+					margin-left: 1%
+	
 	
 	// breadcrumbs
 
@@ -647,6 +670,45 @@
 	// end 404
 		
 +media-breakpoint-down(md)
+	
+	.catalog 
+		.sort-products 
+			.card-item.item-list 
+				.bottom-part 
+					.button-container
+						margin-right: 15px
+						button
+							padding: 5px 18px!important
+					.price
+						white-space: nowrap
+						span
+							font-size: 12px!important
+					.wholesale
+						line-height: 15px
+				.image
+					margin-top: 0
+					margin-bottom: 0
+					height: 100px
+					overflow: visible
+					img
+						width: 100px
+						height: 100px
+				.description 
+					a
+						font-size: 12px
+				.share
+					font-size: 12px
+					padding: 4px 10px
+					left: 7px
+					top: 20px
+	
+	// basket modal
+
+	.basket-modal
+		right: 6%
+
+	// end basket modal
+	
 	.header
 		&__top
 			display: none
@@ -1293,10 +1355,11 @@
 						a
 							font-size: 14px
 						&::before
-							left: -49.2px
+							left: -11%
 						.submenu
 							position: static
 							border: none
+							display: none
 							.submenu
 								display: none
 							li
@@ -1666,6 +1729,44 @@
 	
 @media screen and (max-width: 425px)
 	
+	
+	// basket modal
+
+	.basket-modal
+		width: 100%
+		right: auto
+		left: 50%
+		top: 13%
+		transform: translate(-50%)
+		.modal-contents 
+			.form-basket
+				height: 400px
+				padding-left: 0
+				.adding-counter 
+					input
+						font-size: 11px
+						width: 24px
+						height: 29px
+					.minus,
+					.plus
+						padding: 4px 3px
+				.del-product
+					right: 0
+				.desc-product
+					font-size: 11px
+					max-width: 100%
+				.price
+					font-size: 12px
+					white-space: nowrap
+			.total-description 
+				margin-top: 0
+				.price
+					font-size: 14px
+				a
+					font-size: 10px
+					padding: 7px 18px
+	
+	
 	// breadcrumbs
 
 	nav.breadcrumb
@@ -1692,6 +1793,18 @@
 			.logo 
 				img
 					width: 70%
+		&__bottom 
+			nav 
+				.category-dropdown 
+					li
+						&::before
+							left: -11.5%
+						.submenu 
+							li 
+								a 
+									.arrow-right
+										left: calc(100% + 10px)
+	
 	// catalog
 
 	.catalog 
@@ -1817,6 +1930,21 @@
 						padding-left: 11px
 
 	// end personal cabinet 
+
+
+	// footer
+
+	.footer
+		&__top 
+			.ar 
+				li.next
+					right: 40px
+					background-color: #fff
+				li.prev
+					left: 40px
+					background-color: #fff
+		
+	// end footer
 
 
 @media screen and (max-width: 386px)

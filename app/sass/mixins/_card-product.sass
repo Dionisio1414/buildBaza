@@ -28,6 +28,43 @@
 				transition: all .35s ease-in-out
 				&:hover
 					transform: scale(1.1)
+	&.item-list
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		.description
+			margin: 0
+			margin-left: 4%
+			width: 30%!important
+			min-height: auto
+			border-right: 1px solid #e2e2e2
+			border-left: 1px solid #e2e2e2
+			padding: 0 5px
+		.image
+			margin-left: 7px
+		.bottom-part
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: flex-start
+			border-top: none
+			.wholesale
+				line-height: unset
+				margin-right: 20px
+			.add-to-card
+				margin-top: 0
+				margin-right: 20px
+			.button-container
+				margin-top: 0
+			.price 
+				.old-price
+					margin-right: 20px
+				
 	.share
 		position: absolute
 		top: 22px
