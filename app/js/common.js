@@ -688,19 +688,19 @@ $(function() {
 	
 	// breadcrumb text restrictions
 	
+	trimText(961, "nav.breadcrumb", 40);
+	trimText(691, "nav.breadcrumb", 20);
+	trimText(425, "nav.breadcrumb", 20);
+	trimText(375, "nav.breadcrumb", 10);
+	
 	var $breadcrumbContainer = $('nav.breadcrumb'),
-		$widthContainer = $breadcrumbContainer.outerWidth(),
-		$lastLi = $breadcrumbContainer.find('ol.breadcrumb').find('.breadcrumb-item:last-child'),
-		$lenLi = $lastLi.find('a').text();
-	
-		if($widthContainer < 961 && $lenLi.length > 40) {
-			var $resStr = $lenLi.substring(0, $lenLi.length / 2);
-			$resStr += '...';
-			$lenLi = $resStr.substring(0, $resStr.length);
-			console.log(true)
-		}
-	
-		console.log($lenLi);
+		$bcCaption = $breadcrumbContainer.find('.breadcrumb-caption');
+	var $captText = $bcCaption.text();
+	if($(window).width() < 425 && $captText.length > 30) {
+		var $resultStr = $captText.substring(0, $captText.length / 2);
+			$resultStr += '...';
+			$('.breadcrumb-caption').text($resultStr.trim());
+	}
 	
 });
 
@@ -716,6 +716,19 @@ var display = function(type) {
 		$productCols.removeClass('col-12').addClass('col-sm-6').addClass('col-md-6').addClass('col-lg-3').addClass('col-xl-3');
 		$('.catalog .sort-products .card-item').removeClass('item-list');
 		$('.catalog .sort-products').css('margin', 'unset');
+	}
+}
+
+
+var trimText = function(resolution, container, textLen) {
+	var $breadcrumbContainer = $(container),
+		$widthContainer = $breadcrumbContainer.outerWidth(),
+		$lastLi = $breadcrumbContainer.find('ol.breadcrumb').find('.breadcrumb-item:last-child'),
+		$lenLi = $lastLi.find('a').text();
+	if($widthContainer < resolution && $lenLi.length > textLen) {
+		var $resStr = $lenLi.substring(0, $lenLi.length / 2);
+			$resStr += '...';
+			$lastLi.find('a').text($resStr);
 	}
 }
 
