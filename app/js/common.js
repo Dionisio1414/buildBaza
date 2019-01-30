@@ -701,7 +701,6 @@ $(function() {
 		}
 	
 		console.log($lenLi);
-		$lenLi = 2;
 	
 });
 
