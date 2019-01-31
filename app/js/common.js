@@ -448,10 +448,30 @@ $(function() {
 	});
 	
 	var $cabinetRegion = $('.personal-cabinet .adress-delivery .wrapper-second .custom-select-country');
+	var $cabinetSelect = $cabinetRegion.find('input');
+	var $cabinetOptions = $cabinetRegion.find('ul li a');
 	$cabinetRegion.click(function() {
 		$(this).find('ul').slideToggle();
 		$(this).toggleClass('show');
 	});
+	
+	$cabinetOptions.click(function(e) {
+		e.preventDefault();
+		var $valOption = $(this).text();
+		$cabinetSelect.attr('value', $valOption.trim());
+	});
+	
+		
+	var $cabinetCity = $('.personal-cabinet .adress-delivery .wrapper-second .custom-select-city');
+	var $cabinetCityInput = $cabinetCity.find('input');
+	var $cabinetOptionsCity = $cabinetCity.find('ul li a');
+	
+	$cabinetOptionsCity.click(function(e) {
+		e.preventDefault();
+		var $valOption = $(this).text();
+		$cabinetCityInput.attr('value', $valOption.trim());
+	});
+	
 	
 	// Read more
 
