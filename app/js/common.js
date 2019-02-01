@@ -692,6 +692,15 @@ $(function() {
 		$(this).find('.submenu.s-level').slideDown();
 	});
 	
+	$('.header__bottom nav .category-dropdown li').on('mouseout', function() {
+		$(this).find('.submenu.f-level').slideUp();
+	});
+	
+	$('.header__bottom nav .category-dropdown li .submenu').on('mouseout', function() {
+		$(this).find('.submenu.s-level').slideUp();
+	});
+	
+	
 //	$(document).on('touchstart', function() {
 //		
 //	});
