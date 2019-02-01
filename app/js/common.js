@@ -244,77 +244,71 @@ $(function() {
 	});
 	
 	// counter for products
-	var $generalCount = 0;
-	$('.add-to-card input').on('input', function() {
-		var $val = $(this).val();
-		$generalCount =  parseInt($val);
-		console.log($generalCount);
-	});
 	
 	$('.product__slider .card-item .bottom-part .add-to-card .plus, .catalog .sort-products .card-item .bottom-part .add-to-card .plus').on('click', function(e) {
 		var $input = $(this).siblings('input');
-		var $inputVal = $input.attr('value');
-		$input.attr('value', parseInt($inputVal) + 1);
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
 	});
 	
 	$('.product__slider .card-item .bottom-part .add-to-card .minus, .catalog .sort-products .card-item .bottom-part .add-to-card .minus').on('click', function(e) {
-		var $input = $(this).siblings('input'),
-			$inputVal = $input.attr('value');
-		if($inputVal < 1) {
-			$input.attr('value', parseInt(0));
+		var $input = $(this).siblings('input');
+		if($input.$input < 1) {
+			$input.val(0);
 		} else {
-			$input.attr('value', parseInt($inputVal) - 1);
+			$input.val($input.val() - 1);
 		}
+		$input.change();
 	});
 	
 	$('.pannier .table tbody td.count .adding-counter .plus, .checkout-basket .checkout-form.basket-container .products-container .adding-counter .plus').click(function() {
-		var $input = $(this).siblings('input'),
-			$inputVal = $input.attr('value');
-		$input.attr('value', parseInt($inputVal) + 1);
+		var $input = $(this).siblings('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
 	});
 	
 	$('.pannier .table tbody td.count .adding-counter .minus, .checkout-basket .checkout-form.basket-container .products-container .adding-counter .minus').click(function() {
-		var $input = $(this).siblings('input'),
-			$inputVal = $input.attr('value');
-		if($inputVal < 1) {
-			$input.attr('value', parseInt(0));
+		var $input = $(this).siblings('input');
+		if($input.$input < 1) {
+			$input.val(0);
 		} else {
-			$input.attr('value', parseInt($inputVal) - 1);
+			$input.val($input.val() - 1);
 		}
+		$input.change();
 	});
 	
 	$('.product-inner .description-product .counter .adding-card .minus, .related-products-slider.slick-initialized.slick-slider .card-item .bottom-part .add-to-card .minus').click(function() {
-		var $input = $(this).siblings('input'),
-		$inputVal = $input.attr('value');
-		if($inputVal < 1) {
-			$input.attr('value', parseInt(0));
+		var $input = $(this).siblings('input');
+		if($input.$input < 1) {
+			$input.val(0);
 		} else {
-			$input.attr('value', parseInt($inputVal) - 1);
+			$input.val($input.val() - 1);
 		}
+		$input.change();
 	});
 	
 	$('.product-inner .description-product .counter .adding-card .plus, .related-products-slider.slick-initialized.slick-slider .card-item .bottom-part .add-to-card .plus').click(function() {
-		var $input = $(this).siblings('input'),
-			$inputVal = $input.attr('value');
-		$input.attr('value', parseInt($inputVal) + 1);
+		var $input = $(this).siblings('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
 	});
 	
 	
 	$('.basket-modal .modal-contents .form-basket .adding-counter .minus').click(function() {
-		var $input = $(this).siblings('input'),
-		$inputVal = $input.attr('value');
-		if($inputVal < 1) {
-			$input.attr('value', parseInt(0));
+		var $input = $(this).siblings('input');
+		if($input.$input < 1) {
+			$input.val(0);
 		} else {
-			$input.attr('value', parseInt($inputVal) - 1);
+			$input.val($input.val() - 1);
 		}
+		$input.change();
 	});
 	
 	
 	$('.basket-modal .modal-contents .form-basket .adding-counter .plus').click(function() {
-		var $input = $(this).siblings('input'),
-			$inputVal = $input.attr('value');
-		$input.attr('value', parseInt($inputVal) + 1);
+		var $input = $(this).siblings('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
 	});
 	
 	$('.basket-modal .modal-contents .form-basket .del-product').click(function() {
