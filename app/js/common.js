@@ -249,7 +249,7 @@ $(function() {
 		var $input = $(this).siblings('input');
 		$input.val(parseInt($input.val()) + 1);
 		$input.change();
-		if($input.val() == "NaN") {
+		if($input.val() == "NaN" || $input.val() < 0) {
 			$input.val(0);
 		}
 	});
@@ -271,7 +271,7 @@ $(function() {
 		var $input = $(this).siblings('input');
 		$input.val(parseInt($input.val()) + 1);
 		$input.change();
-		if($input.val() == "NaN") {
+		if($input.val() == "NaN" || $input.val() < 0) {
 			$input.val(0);
 		}
 	});
@@ -306,7 +306,7 @@ $(function() {
 		var $input = $(this).siblings('input');
 		$input.val(parseInt($input.val()) + 1);
 		$input.change();
-		if($input.val() == "NaN") {
+		if($input.val() == "NaN" || $input.val() < 0) {
 			$input.val(0);
 		}
 	});
@@ -330,7 +330,7 @@ $(function() {
 		var $input = $(this).siblings('input');
 		$input.val(parseInt($input.val()) + 1);
 		$input.change();
-		if($input.val() == "NaN") {
+		if($input.val() == "NaN" || $input.val() < 0) {
 			$input.val(0);
 		}
 	});
