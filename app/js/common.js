@@ -684,11 +684,11 @@ $(function() {
 		$(this).find('.mobile-submenu').slideToggle();
 	});
 	
-	$('.header__bottom nav .category-dropdown li').on('touchstart', function() {
+	$('.header__bottom nav .category-dropdown li').on('touchstart mouseover', function() {
 		$(this).find('.submenu.f-level').slideDown();
 	});
 	
-	$('.header__bottom nav .category-dropdown li .submenu').on('touchstart', function() {
+	$('.header__bottom nav .category-dropdown li .submenu').on('touchstart mouseover', function() {
 		$(this).find('.submenu.s-level').slideDown();
 	});
 	
