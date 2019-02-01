@@ -249,59 +249,80 @@ $(function() {
 		var $input = $(this).siblings('input');
 		$input.val(parseInt($input.val()) + 1);
 		$input.change();
+		if($input.val() == "NaN") {
+			$input.val(0);
+		}
 	});
 	
 	$('.product__slider .card-item .bottom-part .add-to-card .minus, .catalog .sort-products .card-item .bottom-part .add-to-card .minus').on('click', function(e) {
 		var $input = $(this).siblings('input');
-		if($input.$input < 1) {
+		if($input.val() < 1) {
 			$input.val(0);
 		} else {
-			$input.val($input.val() - 1);
+			$input.val(parseInt($input.val()) - 1);
 		}
 		$input.change();
+		if($input.val() == "NaN") {
+			$input.val(0);
+		}
 	});
 	
 	$('.pannier .table tbody td.count .adding-counter .plus, .checkout-basket .checkout-form.basket-container .products-container .adding-counter .plus').click(function() {
 		var $input = $(this).siblings('input');
 		$input.val(parseInt($input.val()) + 1);
 		$input.change();
+		if($input.val() == "NaN") {
+			$input.val(0);
+		}
 	});
 	
 	$('.pannier .table tbody td.count .adding-counter .minus, .checkout-basket .checkout-form.basket-container .products-container .adding-counter .minus').click(function() {
 		var $input = $(this).siblings('input');
-		if($input.$input < 1) {
+		if($input.val() < 1) {
 			$input.val(0);
 		} else {
-			$input.val($input.val() - 1);
+			$input.val(parseInt($input.val()) - 1);
 		}
 		$input.change();
+		if($input.val() == "NaN") {
+			$input.val(0);
+		}
 	});
 	
 	$('.product-inner .description-product .counter .adding-card .minus, .related-products-slider.slick-initialized.slick-slider .card-item .bottom-part .add-to-card .minus').click(function() {
 		var $input = $(this).siblings('input');
-		if($input.$input < 1) {
+		if($input.val() < 1) {
 			$input.val(0);
 		} else {
-			$input.val($input.val() - 1);
+			$input.val(parseInt($input.val()) - 1);
 		}
 		$input.change();
+		if($input.val() == "NaN") {
+			$input.val(0);
+		}
 	});
 	
 	$('.product-inner .description-product .counter .adding-card .plus, .related-products-slider.slick-initialized.slick-slider .card-item .bottom-part .add-to-card .plus').click(function() {
 		var $input = $(this).siblings('input');
 		$input.val(parseInt($input.val()) + 1);
 		$input.change();
+		if($input.val() == "NaN") {
+			$input.val(0);
+		}
 	});
 	
 	
 	$('.basket-modal .modal-contents .form-basket .adding-counter .minus').click(function() {
 		var $input = $(this).siblings('input');
-		if($input.$input < 1) {
+		if($input.val() < 1) {
 			$input.val(0);
 		} else {
-			$input.val($input.val() - 1);
+			$input.val(parseInt($input.val()) - 1);
 		}
 		$input.change();
+		if($input.val() == "NaN") {
+			$input.val(0);
+		}
 	});
 	
 	
@@ -309,6 +330,9 @@ $(function() {
 		var $input = $(this).siblings('input');
 		$input.val(parseInt($input.val()) + 1);
 		$input.change();
+		if($input.val() == "NaN") {
+			$input.val(0);
+		}
 	});
 	
 	$('.basket-modal .modal-contents .form-basket .del-product').click(function() {
