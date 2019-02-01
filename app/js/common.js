@@ -1,4 +1,5 @@
 $(function() {
+
 	$('.home-slider').slick({
 		dots: true
 	});
@@ -220,7 +221,7 @@ $(function() {
 	
 	// adress delivery wrapper's
 	
-	var $newAdr = $('.personal-cabinet .adress-delivery button:last-child');
+	var $newAdr = $('.personal-cabinet .adress-delivery button.new-adr');
 	$newAdr.click(function() {
 		$(this).closest('.wrapper-one').hide('fast');
 		$('.personal-cabinet .adress-delivery .wrapper-second').show('fast');
@@ -243,10 +244,16 @@ $(function() {
 	});
 	
 	// counter for products
+	var $generalCount = 0;
+	$('.add-to-card input').on('input', function() {
+		var $val = $(this).val();
+		$generalCount =  parseInt($val);
+		console.log($generalCount);
+	});
 	
 	$('.product__slider .card-item .bottom-part .add-to-card .plus, .catalog .sort-products .card-item .bottom-part .add-to-card .plus').on('click', function(e) {
-		var $input = $(this).siblings('input'),
-			$inputVal = $input.attr('value');
+		var $input = $(this).siblings('input');
+		var $inputVal = $input.attr('value');
 		$input.attr('value', parseInt($inputVal) + 1);
 	});
 	
@@ -666,6 +673,10 @@ $(function() {
 	$('.header__bottom nav .category-dropdown li .submenu').on('touchstart', function() {
 		$(this).find('.submenu.s-level').slideDown();
 	});
+	
+//	$(document).on('touchstart', function() {
+//		
+//	});
 	
 	// mobile search input
 	

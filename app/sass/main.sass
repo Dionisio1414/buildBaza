@@ -692,7 +692,7 @@ b, strong
 								width: 8px
 					.submenu
 						position: absolute
-						display: block
+						display: none
 						z-index: 10
 						left: 265px
 						top: -19px
@@ -702,13 +702,10 @@ b, strong
 						padding: 20px
 						padding-right: 0
 						border: 1px solid #e2e2e2
-						visibility: hidden
- 						opacity: 0
 						.submenu
 							top: -21px
 							left: 100%
-							opacity: 0
-							visibility: hidden
+							display: none
 						li
 							a
 								display: block
@@ -731,8 +728,7 @@ b, strong
 								content: ""
 								display: none
 							&:hover .submenu
-								visibility: visible
-								opacity: 1
+								display: block
 						
 				.timeline
 					position: relative
@@ -3239,6 +3235,10 @@ nav.breadcrumb
 					margin-right: 10px
 				a
 					color: #fff
+				
+					&.email
+						display: inline-block
+						width: auto
 		.contacts
 			li
 				a

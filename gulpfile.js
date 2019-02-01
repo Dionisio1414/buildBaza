@@ -43,6 +43,7 @@ gulp.task('js', function() {
 		'app/libs/magnificPopup/jquery.magnific-popup.js',
 		'app/libs/fancyBox/jquery.fancybox.min.js',
 		'app/libs/jqueryUi/jqueryUi.min.js',
+		'app/libs/totalStorage/jquery.total-storage.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
