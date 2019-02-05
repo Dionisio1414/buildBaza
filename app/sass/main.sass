@@ -675,9 +675,6 @@ b, strong
 						fill: $accent
 					&:last-child
 						margin-bottom: 0
-					&:hover .submenu
-						visibility: visible
-						opacity: 1
 					a
 						font-family: "SegoeRegular", sans-serif
 						font-size: 14px
@@ -690,6 +687,9 @@ b, strong
 							left: 89%
 							svg
 								width: 8px
+					&:hover
+						.submenu
+							display: block
 					.submenu
 						position: absolute
 						display: none
@@ -724,6 +724,8 @@ b, strong
 									color: $accent
 								&:hover .arrow-right svg 
 									fill: $accent
+								&:hover .submenu
+									display: block
 							&::before
 								content: ""
 								display: none

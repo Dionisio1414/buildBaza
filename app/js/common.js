@@ -684,20 +684,12 @@ $(function() {
 		$(this).find('.mobile-submenu').slideToggle();
 	});
 	
-	$('.header__bottom nav .category-dropdown li').on('touchstart mouseover', function() {
+	$('.header__bottom nav .category-dropdown li').on('touchstart', function() {
 		$(this).find('.submenu.f-level').slideDown();
 	});
 	
-	$('.header__bottom nav .category-dropdown li .submenu').on('touchstart mouseover', function() {
+	$('.header__bottom nav .category-dropdown li .submenu,').on('touchstart', function() {
 		$(this).find('.submenu.s-level').slideDown();
-	});
-	
-	$('.header__bottom nav .category-dropdown li').on('mouseout', function() {
-		$(this).find('.submenu.f-level').slideUp();
-	});
-	
-	$('.header__bottom nav .category-dropdown li .submenu').on('mouseout', function() {
-		$(this).find('.submenu.s-level').slideUp();
 	});
 	
 	
