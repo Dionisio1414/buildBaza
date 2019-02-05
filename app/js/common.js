@@ -688,7 +688,7 @@ $(function() {
 		$(this).find('.submenu.f-level').slideDown();
 	});
 	
-	$('.header__bottom nav .category-dropdown li .submenu,').on('touchstart', function() {
+	$('.header__bottom nav .category-dropdown li .submenu').on('touchstart', function() {
 		$(this).find('.submenu.s-level').slideDown();
 	});
 	
